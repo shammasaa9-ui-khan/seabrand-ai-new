@@ -42,10 +42,10 @@ export default function ServicesModal({ isOpen, onClose }: ModalProps) {
 
             <div className="mb-8">
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-2">
-                Let's build something.
+                Let&apos;s build something.
               </h2>
               <p className="text-zinc-500">
-                Fill in the details below, and we'll be in touch shortly.
+                Fill in the details below, and we&apos;ll be in touch shortly.
               </p>
             </div>
 

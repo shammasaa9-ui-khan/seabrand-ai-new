@@ -9,9 +9,26 @@ export default function FocusImage() {
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
-      className="w-full"
+      className="w-full flex justify-center"
     >
-      <div className="relative aspect-4/5 rounded-[2.5rem] overflow-hidden bg-zinc-100 shadow-2xl shadow-zinc-200/50">
+      <div
+        className="
+          relative 
+          w-full
+
+          /* reduced responsive height */
+          h-[180px]
+          sm:h-[240px]
+          md:h-[320px]
+          lg:h-[400px]
+          xl:h-[460px]
+
+          rounded-[2.5rem]
+          overflow-hidden
+          bg-zinc-100
+          shadow-2xl shadow-zinc-200/50
+        "
+      >
         <motion.img
           src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
           alt="Focused collaboration on digital strategy at SeaBrand"
@@ -19,6 +36,7 @@ export default function FocusImage() {
           transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
           className="absolute inset-0 w-full h-full object-cover origin-center"
         />
+
         <div className="absolute inset-0 bg-[#6748FE] opacity-5 mix-blend-screen pointer-events-none" />
       </div>
     </motion.div>

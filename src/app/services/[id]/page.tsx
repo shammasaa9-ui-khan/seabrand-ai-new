@@ -25,7 +25,7 @@ export default async function ServiceDetailPage({
   }
 
   return (
-    <main className="min-h-screen pt-32">
+    <main className="min-h-screen">
       <ServiceDetailClient serviceId={service.id} />
     </main>
   );

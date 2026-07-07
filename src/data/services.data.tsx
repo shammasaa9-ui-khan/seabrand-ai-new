@@ -1,153 +1,20 @@
-// export const servicesData = {
-//   header: {
-//     badge: "Our Services",
-//     title: "AI Strategic\nPowered Branding",
-//     description:
-//       "From data-driven business positioning to personalized identity workflows—we deliver end-to-end strategic branding tailored to your goals.",
-//   },
-//   services: [
-//     {
-//       id: "business-branding",
-//       number: "01", // Use this for the massive background number on the Home page
-
-//       // Home Page Slideshow Content
-//       dynamicTitle: "Business Branding.",
-//       rightTitle: "BUSINESS BRANDING",
-//       rightDesc:
-//         "Build a strong, market-leading brand with AI-driven strategy, identity, and positioning.",
-
-//       // Services Page Card Content
-//       title: "AI Strategic\nBusiness Branding",
-//       description:
-//         "We help businesses establish strong market positions through AI-powered brand strategy, visual identity development, messaging frameworks, and customer experience optimization.",
-//       icon: (
-//         <svg
-//           xmlns="http://www.w3.org/2000/svg"
-//           width="24"
-//           height="24"
-//           viewBox="0 0 24 24"
-//           fill="none"
-//           stroke="currentColor"
-//           strokeWidth="2"
-//           strokeLinecap="round"
-//           strokeLinejoin="round"
-//         >
-//           <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
-//           <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
-//         </svg>
-//       ),
-//     },
-//     {
-//       id: "personal-branding",
-//       number: "02",
-
-//       // Home Page Slideshow Content
-//       dynamicTitle: "Personal Branding.",
-//       rightTitle: "PERSONAL BRANDING",
-//       rightDesc:
-//         "Grow your influence and credibility with a powerful personal brand.",
-
-//       // Services Page Card Content
-//       title: "AI Strategic\nPersonal Branding",
-//       description:
-//         "We help founders, professionals, creators, and industry experts build influential personal brands that attract opportunities, partnerships, and authority.",
-//       icon: (
-//         <svg
-//           xmlns="http://www.w3.org/2000/svg"
-//           width="24"
-//           height="24"
-//           viewBox="0 0 24 24"
-//           fill="none"
-//           stroke="currentColor"
-//           strokeWidth="2"
-//           strokeLinecap="round"
-//           strokeLinejoin="round"
-//         >
-//           <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-//           <circle cx="12" cy="7" r="4" />
-//         </svg>
-//       ),
-//     },
-//     {
-//       id: "startup-branding",
-//       number: "03",
-
-//       // Home Page Slideshow Content
-//       dynamicTitle: "Startup Branding.",
-//       rightTitle: "STARTUP BRANDING",
-//       rightDesc:
-//         "Transform your startup idea into a compelling, investor-ready brand.",
-
-//       // Services Page Card Content
-//       title: "AI Strategic\nStartup Branding",
-//       description:
-//         "We work with startups from idea to launch, helping them create compelling brand identities, market positioning, investor-ready presentations, and growth-focused marketing systems.",
-//       icon: (
-//         <svg
-//           xmlns="http://www.w3.org/2000/svg"
-//           width="24"
-//           height="24"
-//           viewBox="0 0 24 24"
-//           fill="none"
-//           stroke="currentColor"
-//           strokeWidth="2"
-//           strokeLinecap="round"
-//           strokeLinejoin="round"
-//         >
-//           <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
-//           <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
-//           <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
-//           <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
-//         </svg>
-//       ),
-//     },
-//     {
-//       id: "entertainment-branding",
-//       number: "04",
-
-//       // Home Page Slideshow Content
-//       dynamicTitle: "Entertainment Branding.",
-//       rightTitle: "ENTERTAINMENT BRANDING",
-//       rightDesc:
-//         "Create memorable entertainment brands that engage audiences and build loyal communities.",
-
-//       // Services Page Card Content
-//       title: "AI Strategic\nEntertainment Branding",
-//       description:
-//         "We help artists, influencers, creators, media companies, and entertainment brands build memorable digital identities and loyal communities.",
-//       icon: (
-//         <svg
-//           xmlns="http://www.w3.org/2000/svg"
-//           width="24"
-//           height="24"
-//           viewBox="0 0 24 24"
-//           fill="none"
-//           stroke="currentColor"
-//           strokeWidth="2"
-//           strokeLinecap="round"
-//           strokeLinejoin="round"
-//         >
-//           <rect width="18" height="18" x="3" y="3" rx="2" />
-//           <path d="M7 3v18" />
-//           <path d="M3 7.5h4" />
-//           <path d="M3 12h18" />
-//           <path d="M3 16.5h4" />
-//           <path d="M17 3v18" />
-//           <path d="M17 7.5h4" />
-//           <path d="M17 16.5h4" />
-//         </svg>
-//       ),
-//     },
-//   ],
-// };
-
-
-
+import React from "react";
+import { 
+  RefreshCw, 
+  Mic, 
+  Share2, 
+  Megaphone, 
+  TrendingUp, 
+  UserCheck, 
+  Video, 
+  Target // Added for the purpose bullseye icon in image_91eba6.png
+} from "lucide-react";
 
 export const servicesData = {
   header: {
     badge: "Our Services",
     title: "AI Strategic\nPowered Branding",
+    objective: "Refresh and reposition an existing brand for today's market.",
     description:
       "From data-driven business positioning to personalized identity workflows—we deliver end-to-end strategic branding tailored to your goals.",
   },
@@ -165,21 +32,86 @@ export const servicesData = {
       // Services Page Card Content
       title: "AI Strategic\nBusiness Branding",
       description:
-        "We help businesses establish strong market positions through AI-powered brand strategy, visual identity development, messaging frameworks, and customer experience optimization.",
+        "Transform existing businesses into scalable, AI-driven brands through strategy, identity, content, marketing, and growth systems.",
       
-      // NEW: Detail Page Content
-      overview:
-        "We leverage advanced generative AI and market data analysis to construct a brand identity that isn't just visually stunning, but mathematically positioned to capture your target audience. We eliminate the guesswork from enterprise brand strategy, ensuring long-term market dominance.",
-      deliverables: [
-        "Data-Backed Brand Identity",
-        "AI-Generated Visual Guidelines",
-        "Competitor Gap Analysis",
-        "Tone of Voice Architecture"
-      ],
       process: [
-        { step: "01", name: "Market Analysis", detail: "We analyze your industry landscape using AI to find visual and strategic gaps." },
-        { step: "02", name: "Concept Generation", detail: "Rapid prototyping of enterprise brand assets using generative models for your review." },
-        { step: "03", name: "Brand Application", detail: "Human-led curation and refinement to perfect the business brand ecosystem." }
+        {
+          step: "01",
+          name: "Rebranding",
+          icon: <RefreshCw className="w-5 h-5 stroke-[2.5]" />,
+          detail: "Objective: Refresh and reposition an existing brand for today's market.",
+          services: [
+            "Brand Strategy Audit",
+            "Brand Repositioning",
+            "Logo Redesign",
+            "Brand Identity System",
+            "Brand Guidelines",
+            "Visual Identity Refresh"
+          ]
+        },
+        {
+          step: "02",
+          name: "Podcast Branding",
+          icon: <Mic className="w-5 h-5 stroke-[2.5]" />, 
+          detail: "Objective: Build trust and authority through strategic storytelling.",
+          services: [
+            "Founder Story Development",
+            "Brand Story Creation",
+            "Product Storytelling",
+            "Service Storytelling",
+            "Podcast Strategy",
+            "Podcast Production Planning",
+            "AI Content Repurposing"
+          ]
+        },
+        {
+          step: "03",
+          name: "Social Media Branding",
+          icon: <Share2 className="w-5 h-5 stroke-[2.5]" />, 
+          detail: "Objective: Create a consistent and recognizable digital brand presence.",
+          services: [
+            "Social Media Brand Strategy",
+            "Social Media Profile Optimization",
+            "Content Strategy",
+            "Creative Design System",
+            "Social Media Posters",
+            "Reels & Short-form Content",
+            "Content Calendar",
+            "Community Engagement Strategy"
+          ]
+        },
+        {
+          step: "04",
+          name: "Brand Marketing",
+          icon: <Megaphone className="w-5 h-5 stroke-[2.5]" />, 
+          detail: "Objective: Turn branding into measurable business growth.",
+          services: [
+            "Marketing Strategy",
+            "Campaign Planning",
+            "Lead Generation Strategy",
+            "Brand Awareness Campaigns",
+            "Customer Engagement Strategy",
+            "Performance Tracking",
+            "Growth Optimization",
+            "AI Marketing Automation"
+          ]
+        },
+        {
+          step: "05",
+          name: "Business Growth",
+          icon: <TrendingUp className="w-5 h-5 stroke-[2.5]" />, 
+          detail: "Objective: Develop a structured execution plan that transforms strategy into measurable business growth.",
+          services: [
+            "Business Growth Strategy",
+            "Execution Roadmap",
+            "Workflow Design",
+            "KPI & Performance Planning",
+            "Scaling Strategy",
+            "Team Process Planning",
+            "Business Optimization",
+            "Business System Development"
+          ]
+        }
       ],
 
       icon: (
@@ -207,27 +139,113 @@ export const servicesData = {
       dynamicTitle: "Personal Branding.",
       rightTitle: "PERSONAL BRANDING",
       rightDesc:
-        "Grow your influence and credibility with a powerful personal brand.",
+        "Build a strong personal identity, authority, and influence using an AI-driven strategic branding ecosystem.",
 
       // Services Page Card Content
       title: "AI Strategic\nPersonal Branding",
+      subtitle:"For Founders, Entrepreneurs, Professionals, Creators & Public Figures",
       description:
         "We help founders, professionals, creators, and industry experts build influential personal brands that attract opportunities, partnerships, and authority.",
       
-      // NEW: Detail Page Content
+      // Added Purpose field with matching target icon from image_91eba6.png
+      purpose: {
+        title: "Purpose",
+        icon: <Target className="w-6 h-6 stroke-[2.5]" />,
+        text: "Build a strong personal identity, authority, and influence using an AI-driven strategic branding ecosystem."
+      },
+
       overview:
-        "Your reputation is your biggest asset. We use AI-driven insights to uncover your unique value proposition, scaling your personal narrative into a recognizable, authoritative brand that commands attention, builds trust, and drives industry influence.",
+        "Your reputation is your biggest asset. We use AI-driven insights to uncover your unique value proposition, scaling your personal narrative into a recognizable, authoritative brand.",
+      
       deliverables: [
         "Personal Brand Strategy",
         "Content Pillar Architecture",
         "Social Media Identity Kit",
         "Thought Leadership Framework"
       ],
+      
       process: [
-        { step: "01", name: "Persona Discovery", detail: "Deep dive into your professional background, goals, and unique voice." },
-        { step: "02", name: "Identity Design", detail: "Crafting a visual and narrative style that authentically represents you." },
-        { step: "03", name: "Growth Strategy", detail: "Implementing AI-assisted content workflows to scale your online presence." }
+        {
+          step: "01",
+          name: "Personal Brand Development",
+          icon: <UserCheck className="w-5 h-5 stroke-[2.5]" />,
+          detail: "Objective: Build confidence, clarity, and leadership.",
+          services: [
+            "Personality Assessment",
+            "Confidence Building",
+            "Public Speaking Preparation",
+            "Camera Confidence Training",
+            "Stage Presence Development",
+            "Leadership Mindset",
+            "Personal Positioning",
+            "Personal Brand Direction"
+          ]
+        },
+        {
+          step: "02",
+          name: "Personal Story Branding",
+          icon: <Mic className="w-5 h-5 stroke-[2.5]" />,
+          detail: "Objective: Turn your journey into your strongest brand asset through podcast.",
+          services: [
+            "Founder Story",
+            "Personal Story",
+            "Business Journey",
+            "Success & Failure Stories",
+            "Brand Voice Development",
+            "Signature Message",
+            "Thought Leadership Positioning"
+          ]
+        },
+        {
+          step: "03",
+          name: "Content & Vlog Branding",
+          icon: <Video className="w-5 h-5 stroke-[2.5]" />,
+          detail: "Objective: Build authority through consistent content.",
+          services: [
+            "Vlog Strategy",
+            "Educational Content",
+            "Founder Content",
+            "Business Lessons",
+            "Behind-the-Scenes Content",
+            "Podcast Content",
+            "Short-form Video Strategy",
+            "AI Content Repurposing"
+          ]
+        },
+        {
+          step: "04",
+          name: "Personal Brand Promotion",
+          icon: <Megaphone className="w-5 h-5 stroke-[2.5]" />,
+          detail: "Objective: Increase visibility and authority.",
+          services: [
+            "Social Media Branding",
+            "Profile Optimization",
+            "Content Distribution",
+            "Community Building",
+            "Audience Growth Strategy",
+            "Personal PR Strategy",
+            "Platform Growth",
+            "AI Content Scheduling"
+          ]
+        },
+        {
+          step: "05",
+          name: "Personal Brand Growth",
+          icon: <TrendingUp className="w-5 h-5 stroke-[2.5]" />,
+          detail: "Objective: Scale your personal brand through a structured growth strategy that strengthens visibility, credibility, influence, and long-term career opportunities.",
+          services: [
+            "Growth Strategy",
+            "Execution Roadmap",
+            "Opportunity Mapping",
+            "Personal Brand Scaling",
+            "Collaboration Planning",
+            "Speaking Opportunities",
+            "Network Building",
+            "Long-term Personal Brand Roadmap"
+          ]
+        }
       ],
+      
 
       icon: (
         <svg
@@ -243,108 +261,6 @@ export const servicesData = {
         >
           <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
           <circle cx="12" cy="7" r="4" />
-        </svg>
-      ),
-    },
-    {
-      id: "startup-branding",
-      number: "03",
-
-      // Home Page Slideshow Content
-      dynamicTitle: "Startup Branding.",
-      rightTitle: "STARTUP BRANDING",
-      rightDesc:
-        "Transform your startup idea into a compelling, investor-ready brand.",
-
-      // Services Page Card Content
-      title: "AI Strategic\nStartup Branding",
-      description:
-        "We work with startups from idea to launch, helping them create compelling brand identities, market positioning, investor-ready presentations, and growth-focused marketing systems.",
-      
-      // NEW: Detail Page Content
-      overview:
-        "Startups need to move fast and make an immediate impact. We combine agile branding methodologies with AI strategic tools to build scalable, investor-ready identities that communicate innovation and market disruption from day one.",
-      deliverables: [
-        "Investor Pitch Deck Design",
-        "Minimum Viable Brand (MVB)",
-        "Go-to-Market Messaging",
-        "Scalable Design System"
-      ],
-      process: [
-        { step: "01", name: "Vision Alignment", detail: "Aligning your startup's core mission with market expectations and investor criteria." },
-        { step: "02", name: "Agile Prototyping", detail: "Rapidly designing logos, typography, and UI assets for immediate testing." },
-        { step: "03", name: "Launch Readiness", detail: "Finalizing pitch materials and digital assets for a powerful market entry." }
-      ],
-
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
-          <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
-          <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
-          <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
-        </svg>
-      ),
-    },
-    {
-      id: "entertainment-branding",
-      number: "04",
-
-      // Home Page Slideshow Content
-      dynamicTitle: "Entertainment Branding.",
-      rightTitle: "ENTERTAINMENT BRANDING",
-      rightDesc:
-        "Create memorable entertainment brands that engage audiences and build loyal communities.",
-
-      // Services Page Card Content
-      title: "AI Strategic\nEntertainment Branding",
-      description:
-        "We help artists, influencers, creators, media companies, and entertainment brands build memorable digital identities and loyal communities.",
-      
-      // NEW: Detail Page Content
-      overview:
-        "In the attention economy, standing out requires dynamic, highly engaging visual narratives. We utilize trend-predictive AI and bold creative direction to craft entertainment brands that build hype, drive engagement, and foster super-fan communities.",
-      deliverables: [
-        "Creator Identity System",
-        "Merchandise Design Concepts",
-        "Social Media Motion Assets",
-        "Community Engagement Playbook"
-      ],
-      process: [
-        { step: "01", name: "Trend & Audience Analysis", detail: "Using AI to analyze current pop-culture trends and audience demographics." },
-        { step: "02", name: "Visual World-Building", detail: "Creating immersive, high-energy aesthetics tailored to your medium." },
-        { step: "03", name: "Multi-Channel Rollout", detail: "Adapting the brand across video, social, merch, and physical activations." }
-      ],
-
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <rect width="18" height="18" x="3" y="3" rx="2" />
-          <path d="M7 3v18" />
-          <path d="M3 7.5h4" />
-          <path d="M3 12h18" />
-          <path d="M3 16.5h4" />
-          <path d="M17 3v18" />
-          <path d="M17 7.5h4" />
-          <path d="M17 16.5h4" />
         </svg>
       ),
     },

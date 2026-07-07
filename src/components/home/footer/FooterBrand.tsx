@@ -8,12 +8,12 @@ export default function FooterBrand() {
       <div className="flex flex-col gap-5">
         <Link href="/" className="inline-block w-fit">
           <Image
-            src="/images/seabrand-logo-fullwhite.png"
+            src="/images/logo-white.png"
             alt="SeaBrand Logo"
             width={200}
             height={100}
-            className="object-contain brightness-0 invert"
             priority
+            className="w-[90px] sm:w-[110px] md:w-[150px] lg:w-[200px] h-auto object-contain brightness-0 invert"
           />
         </Link>
       </div>
@@ -30,16 +30,19 @@ export default function FooterBrand() {
             676503
           </p>
         </div>
+
         <div className="flex flex-col gap-2">
           <p className="text-white font-semibold mb-1 tracking-wide uppercase text-xs">
             Contact
           </p>
+
           <a
             href="mailto:info@seabrand.com"
             className="hover:text-white transition-colors w-fit"
           >
             curator@seabrand.in
           </a>
+
           <a
             href="tel:+918081301190"
             className="hover:text-white transition-colors w-fit"

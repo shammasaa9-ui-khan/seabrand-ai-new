@@ -17,6 +17,13 @@ export const footerLinks = [
       { name: "Entertainment Branding", href: "/services" },
     ],
   },
+  {
+    title: "Contact",
+    links: [
+      { name: "mailto:curator@seabrand.in", href: "mailto:curator@seabrand.in" },
+      { name: "(+91) 811 392 5507", href: "tel:+918113925507" },
+    ],
+  }
 ];
 
 export const socialLinks = [

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
@@ -8,35 +9,47 @@ import { navLinks } from "@/src/data/navbar.data";
 
 export default function DesktopNav() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const pathname = usePathname();
 
   return (
-    <nav className="hidden md:flex items-center gap-8 font-medium text-sm">
-      {navLinks.map((link) => (
-        <div
-          key={link.name}
-          className="relative group"
-          onMouseEnter={() => link.subLinks && setActiveDropdown(link.name)}
-          onMouseLeave={() => link.subLinks && setActiveDropdown(null)}
-        >
-          <Link href={link.href} className="group flex items-center gap-1 py-2">
-            {/* The Rolling Text Container */}
-            <div className="relative overflow-hidden inline-flex">
-              <span className="block transition-transform duration-500 ease-[0.76,0,0.24,1] group-hover:translate-y-full">
-                {link.name}
-              </span>
-              <span className="absolute inset-0 block transition-transform duration-500 ease-[0.76,0,0.24,1] -translate-y-full group-hover:translate-y-0 text-[#6748FE]">
-                {link.name}
-              </span>
-            </div>
+    <nav className="hidden md:flex items-center gap-8 font-medium text-sm" role="navigation" aria-label="Desktop navigation">
+      {navLinks.map((link) => {
+        // Match exact or parent route matching
+        const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href));
+        return (
+          <div
+            key={link.name}
+            className="relative group"
+            onMouseEnter={() => link.subLinks && setActiveDropdown(link.name)}
+            onMouseLeave={() => link.subLinks && setActiveDropdown(null)}
+          >
+            <Link href={link.href} className="group relative flex items-center gap-1 py-2">
+              {/* The Rolling Text Container */}
+              <div className="relative overflow-hidden inline-flex">
+                <span className={`block transition-transform duration-500 ease-[0.76,0,0.24,1] group-hover:translate-y-full ${isActive ? 'text-[#6748FE] font-semibold' : ''}`}>
+                  {link.name}
+                </span>
+                <span className="absolute inset-0 block transition-transform duration-500 ease-[0.76,0,0.24,1] -translate-y-full group-hover:translate-y-0 text-[#6748FE]">
+                  {link.name}
+                </span>
+              </div>
 
-            {link.subLinks && (
-              <ChevronDown
-                className={`w-4 h-4 transition-transform duration-300 ${
-                  activeDropdown === link.name ? "rotate-180 text-[#6748FE]" : "text-black group-hover:text-[#6748FE]"
-                }`}
-              />
-            )}
-          </Link>
+              {link.subLinks && (
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform duration-300 ${
+                    activeDropdown === link.name ? "rotate-180 text-[#6748FE]" : (isActive ? "text-[#6748FE]" : "text-current group-hover:text-[#6748FE]")
+                  }`}
+                />
+              )}
+
+              {isActive && (
+                <motion.div
+                  layoutId="activeIndicator"
+                  className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#6748FE] rounded-full"
+                  transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                />
+              )}
+            </Link>
 
           {/* Desktop Dropdown Menu (Glass Effect) */}
           {link.subLinks && (
@@ -76,7 +89,8 @@ export default function DesktopNav() {
             </AnimatePresence>
           )}
         </div>
-      ))}
+      );
+    })}
     </nav>
   );
 }
