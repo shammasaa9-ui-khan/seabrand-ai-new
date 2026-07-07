@@ -1,7 +1,4 @@
-/* 
-
-*/
-
+/* Custom Fonts */
 @font-face {
   font-family: "BAHAMABD";
   src: url("https://static.wfonts.com/data/2015/05/23/bahamas/BAHAMABD.ttf")
@@ -19,11 +16,25 @@
   font-display: swap;
 }
 
-
+/* Tailwind Import */
 @import "tailwindcss";
 
+/* Theme Configuration */
 @theme {
   --font-bahamas: "BAHAMABD", sans-serif;
   --font-bahamas-light: "BAHAMAS_LIGHT", sans-serif;
   --font-bahamas-heavy: "BAHAMAS_HEAVY", sans-serif;
+}
+
+/* --- Added Base Styling --- */
+@layer base {
+  /* Default body text becomes Bahamas Light */
+  body {
+    @apply font-bahamas-light;
+  }
+
+  /* Headings stay untouched (or you can explicitly force them to use your default/heading fonts) */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bahamas; /* Change this to font-bahamas-heavy if you prefer */
+  }
 }

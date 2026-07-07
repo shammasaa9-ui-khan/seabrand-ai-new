@@ -1,3 +1,4 @@
+
 // "use client";
 
 // import RevolutionBackground from "./RevolutionBackground";
@@ -7,14 +8,14 @@
 // export default function StrategicRevolution() {
 //   return (
 //     <section
-//       className="py-24 md:py-40 bg-[#050505] relative overflow-hidden"
+//       className="py-24 md:py-20 bg-[#050505] relative overflow-hidden w-full"
 //       id="impact"
 //     >
 //       {/* 1. Background Elements */}
 //       <RevolutionBackground />
 
-//       {/* 2. Main Content Container */}
-//       <div className="container-custom mx-auto px-4 sm:px-6 relative z-10">
+//       {/* ✅ FIXED: Universal Container applied */}
+//       <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 relative z-10">
 //         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
           
 //           <RevolutionHeader />
@@ -27,7 +28,7 @@
 //   );
 // }
 
-"use client";
+// "use client";
 
 import RevolutionBackground from "./RevolutionBackground";
 import RevolutionHeader from "./RevolutionHeader";
@@ -36,15 +37,17 @@ import RevolutionStatsGrid from "./RevolutionStatsGrid";
 export default function StrategicRevolution() {
   return (
     <section
-      className="py-24 md:py-20 bg-[#050505] relative overflow-hidden w-full"
+      /* ✅ FIXED: Changed py-24 to pt-16 pb-12 for mobile. md:py-20 (Laptop) remains untouched. */
+      className="pt-16 pb-12 md:py-20 bg-[#050505] relative overflow-hidden w-full"
       id="impact"
     >
       {/* 1. Background Elements */}
       <RevolutionBackground />
 
-      {/* ✅ FIXED: Universal Container applied */}
+      {/* Universal Container applied */}
       <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
+        {/* ✅ FIXED: Changed mobile gap from gap-16 to gap-8 */}
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-24 items-start">
           
           <RevolutionHeader />
           

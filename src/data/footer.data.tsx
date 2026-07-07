@@ -1,3 +1,14 @@
+
+export const   Headquarters = [
+  {
+    title: "Headquarters",
+    links: [
+      { name: "Kerala, India" },
+      { name: "676503" },
+      
+    ],
+  },
+];
 export const footerLinks = [
   {
     title: "Navigation",
@@ -22,6 +33,7 @@ export const footerLinks = [
     links: [
       { name: "mailto:curator@seabrand.in", href: "mailto:curator@seabrand.in" },
       { name: "(+91) 811 392 5507", href: "tel:+918113925507" },
+      
     ],
   }
 ];

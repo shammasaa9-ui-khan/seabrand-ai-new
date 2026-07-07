@@ -1,3 +1,5 @@
+// 
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -30,8 +32,8 @@ export default function HeroHeadline() {
         select-none
       "
     >
-      {/* Mobile View */}
-      <div className="md:hidden flex flex-col leading-[0.88]">
+      {/* Mobile View - Increased text line gap slightly more, pulled layout gaps tighter */}
+      <div className="md:hidden flex flex-col leading-[0.98] tracking-tighter my-[-35px]">
         <span>Kerala&apos;s</span>
 
         <span>
@@ -51,7 +53,7 @@ export default function HeroHeadline() {
         </span>
       </div>
 
-      {/* Desktop View */}
+      {/* Desktop View - Unchanged */}
       <div className="hidden md:flex flex-col leading-[1.05]">
         <span>
           Kerala&apos;s Fi
