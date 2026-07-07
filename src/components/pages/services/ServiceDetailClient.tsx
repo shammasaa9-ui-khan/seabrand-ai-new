@@ -7,6 +7,7 @@ import ServicesModal from "./ServicesModal";
 import { servicesData } from "@/src/data/services.data";
 import { Target } from "lucide-react"; 
 
+// FIX: Explicitly defined transition easing structure to stop Type matching errors
 const fadeUp: Variants = {
   hidden: {
     opacity: 0,
@@ -17,7 +18,7 @@ const fadeUp: Variants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut",
+      ease: "easeOut", // Safe predefined string transition
     },
   },
 };
@@ -28,7 +29,7 @@ interface ProcessStep {
   name: string;
   detail?: string; 
   services?: string[]; 
-  icon?: React.ComponentType<unknown> | React.ReactNode; // Can be a Component or Node
+  icon?: React.ComponentType<unknown> | React.ReactNode; 
 }
 
 interface ServicePurpose {
@@ -45,7 +46,6 @@ interface ServiceItem {
   process?: ProcessStep[];
 }
 
-// Safely rendering the icon whether it is a Component or an Element
 function CustomGlowingIcon({ icon }: { icon?: React.ComponentType<unknown> | React.ReactNode }) {
   if (!icon) return null;
 
@@ -56,7 +56,6 @@ function CustomGlowingIcon({ icon }: { icon?: React.ComponentType<unknown> | Rea
       <div className="absolute inset-0 rounded-full border border-dashed border-blue-400/20 scale-115 opacity-20 animate-[spin_180s_linear_infinite]" />
       
       <div className="relative z-10 p-2 md:p-3.5 bg-gradient-to-b from-[#2563EB]/80 to-[#0A1F44]/90 text-white rounded-full shadow-[0_4px_24px_rgba(37,99,235,0.15),inset_0_1px_1px_rgba(255,255,255,0.1)] border border-blue-400/20 flex items-center justify-center [&>svg]:w-4 [&>svg]:h-4 md:[&>svg]:w-6 md:[&>svg]:h-6">
-        {/* If icon is a component (like Lucide Icon), render it. If it's already an element, render it directly */}
         {typeof icon === "function" ? React.createElement(icon as React.ComponentType) : icon}
       </div>
     </div>
@@ -66,7 +65,6 @@ function CustomGlowingIcon({ icon }: { icon?: React.ComponentType<unknown> | Rea
 export default function ServiceDetailClient({ serviceId }: { serviceId: string }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Strictly cast servicesData to keep TypeScript happy and prevent runtime crashes
   const data = servicesData as unknown as { services: ServiceItem[] };
   const service = data?.services?.find((s) => s.id === serviceId);
 
@@ -78,13 +76,12 @@ export default function ServiceDetailClient({ serviceId }: { serviceId: string }
   };
 
   const handleModalClose = () => {
-    setIsModalOpen(false);
+    setIsModalOpen(false)
     if (typeof window !== "undefined") {
       document.body.style.overflow = "unset";
     }
   };
 
-  // If service is not found, return a safe fallback UI instead of crashing the whole page
   if (!service) {
     return (
       <div className="min-h-screen bg-black text-white flex items-center justify-center">
@@ -99,7 +96,6 @@ export default function ServiceDetailClient({ serviceId }: { serviceId: string }
   return (
     <div className="relative bg-[#000000] text-white selection:bg-blue-600 selection:text-white min-h-screen overflow-hidden">
       
-      {/* MOVING BACKGROUND COLOR ANIMATION LAYER */}
       <motion.div 
         animate={{
           backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
@@ -113,12 +109,10 @@ export default function ServiceDetailClient({ serviceId }: { serviceId: string }
         className="absolute inset-0 bg-gradient-to-br from-[#000000] via-[#051124] to-[#0a1e3d] opacity-90 pointer-events-none z-0" 
       />
 
-      {/* AMBIENT GLOW BLOBS */}
       <div className="absolute top-[-30%] left-[-15%] w-[85%] h-[100%] bg-[radial-gradient(circle_at_center,rgba(10,31,68,0.35)_0%,rgba(5,16,31,0.05)_70%,transparent_100%)] blur-[150px] pointer-events-none z-0" />
       <div className="absolute bottom-[-20%] left-[-10%] w-[65%] h-[90%] bg-[radial-gradient(circle_at_center,rgba(7,27,52,0.25)_0%,transparent_70%)] blur-[180px] pointer-events-none z-0" />
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#000000] via-[#000000]/40 to-transparent pointer-events-none z-0" />
 
-      {/* MAIN CONTENT */}
       <section className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16 pt-32 pb-16 md:pt-44 md:pb-32">
         
         <div className="flex flex-col items-center justify-center text-center mb-8 md:mb-20">
