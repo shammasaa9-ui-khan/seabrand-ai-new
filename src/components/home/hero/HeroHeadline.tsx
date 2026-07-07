@@ -32,8 +32,8 @@ export default function HeroHeadline() {
         select-none
       "
     >
-      {/* Mobile View - Increased text line gap slightly more, pulled layout gaps tighter */}
-      <div className="md:hidden flex flex-col leading-[0.98] tracking-tighter my-[-35px]">
+      {/* Mobile View - Changed tracking-tighter to tracking-normal for better letter spacing */}
+      <div className="md:hidden flex flex-col leading-[1.15] tracking-normal py-4">
         <span>Kerala&apos;s</span>
 
         <span>
@@ -53,7 +53,7 @@ export default function HeroHeadline() {
         </span>
       </div>
 
-      {/* Desktop View - Unchanged */}
+      {/* Desktop View - Left completely unchanged */}
       <div className="hidden md:flex flex-col leading-[1.05]">
         <span>
           Kerala&apos;s Fi
