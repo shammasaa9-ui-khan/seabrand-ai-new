@@ -1,30 +1,52 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import ServicesCTA from "./ServiceCTA";
 import ServicesModal from "./ServicesModal";
 import { servicesData } from "@/src/data/services.data";
 import { Target } from "lucide-react"; 
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
+const fadeUp: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
   },
 };
 
+// Fixed Interfaces to match exactly with data types
 interface ProcessStep {
   step: string;
   name: string;
   detail?: string; 
   services?: string[]; 
-  icon?: React.ReactNode; 
+  icon?: React.ComponentType<unknown> | React.ReactNode; // Can be a Component or Node
 }
 
-function CustomGlowingIcon({ icon }: { icon?: React.ReactNode }) {
+interface ServicePurpose {
+  title?: string;
+  text?: string;
+}
+
+interface ServiceItem {
+  id: string;
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  purpose?: ServicePurpose;
+  process?: ProcessStep[];
+}
+
+// Safely rendering the icon whether it is a Component or an Element
+function CustomGlowingIcon({ icon }: { icon?: React.ComponentType<unknown> | React.ReactNode }) {
   if (!icon) return null;
 
   return (
@@ -34,7 +56,8 @@ function CustomGlowingIcon({ icon }: { icon?: React.ReactNode }) {
       <div className="absolute inset-0 rounded-full border border-dashed border-blue-400/20 scale-115 opacity-20 animate-[spin_180s_linear_infinite]" />
       
       <div className="relative z-10 p-2 md:p-3.5 bg-gradient-to-b from-[#2563EB]/80 to-[#0A1F44]/90 text-white rounded-full shadow-[0_4px_24px_rgba(37,99,235,0.15),inset_0_1px_1px_rgba(255,255,255,0.1)] border border-blue-400/20 flex items-center justify-center [&>svg]:w-4 [&>svg]:h-4 md:[&>svg]:w-6 md:[&>svg]:h-6">
-        {icon}
+        {/* If icon is a component (like Lucide Icon), render it. If it's already an element, render it directly */}
+        {typeof icon === "function" ? React.createElement(icon as React.ComponentType) : icon}
       </div>
     </div>
   );
@@ -43,22 +66,35 @@ function CustomGlowingIcon({ icon }: { icon?: React.ReactNode }) {
 export default function ServiceDetailClient({ serviceId }: { serviceId: string }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const service = servicesData.services.find((s) => s.id === serviceId);
+  // Strictly cast servicesData to keep TypeScript happy and prevent runtime crashes
+  const data = servicesData as unknown as { services: ServiceItem[] };
+  const service = data?.services?.find((s) => s.id === serviceId);
 
   const handleModalOpen = () => {
     setIsModalOpen(true);
-    document.body.style.overflow = "hidden";
+    if (typeof window !== "undefined") {
+      document.body.style.overflow = "hidden";
+    }
   };
 
   const handleModalClose = () => {
     setIsModalOpen(false);
-    document.body.style.overflow = "unset";
+    if (typeof window !== "undefined") {
+      document.body.style.overflow = "unset";
+    }
   };
 
-  if (!service) return null;
+  // If service is not found, return a safe fallback UI instead of crashing the whole page
+  if (!service) {
+    return (
+      <div className="min-h-screen bg-black text-white flex items-center justify-center">
+        <p className="text-sm opacity-50">Service not found.</p>
+      </div>
+    );
+  }
 
-  const serviceSubtitle = (service as Record<string, any>).subtitle || "For Existing Businesses Only";
-  const servicePurpose = (service as Record<string, any>).purpose;
+  const serviceSubtitle = service.subtitle || "For Existing Businesses Only";
+  const servicePurpose = service.purpose;
 
   return (
     <div className="relative bg-[#000000] text-white selection:bg-blue-600 selection:text-white min-h-screen overflow-hidden">
@@ -131,10 +167,11 @@ export default function ServiceDetailClient({ serviceId }: { serviceId: string }
               "from-slate-500/8 via-transparent to-transparent"
             ];
             const currentGradient = edgeGradients[index % edgeGradients.length];
+            const stepKey = proc.step ? `${proc.step}-${index}` : `step-${index}`;
 
             return (
               <motion.div
-                key={`${proc.step || "step"}-${index}`}
+                key={stepKey}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -171,7 +208,7 @@ export default function ServiceDetailClient({ serviceId }: { serviceId: string }
                     <ul className="space-y-1 md:space-y-2">
                       {proc.services.map((item: string, idx: number) => (
                         <li
-                          key={idx}
+                          key={`${stepKey}-service-${idx}`}
                           className="text-[11px] md:text-[14px] text-[#CBD5E1] hover:text-white transition-colors flex items-start gap-2 font-normal"
                         >
                           <span className="w-1 md:w-1.5 h-1 md:h-1.5 rounded-full bg-[#2563EB] shadow-[0_0_8px_#2563eb] shrink-0 mt-1.5" />
