@@ -7,7 +7,10 @@ import {
   TrendingUp, 
   UserCheck, 
   Video, 
-  Target // Added for the purpose bullseye icon in image_91eba6.png
+  Target, 
+  Users,
+  Lightbulb,
+  PenTool
 } from "lucide-react";
 
 export const servicesData = {
@@ -30,16 +33,21 @@ export const servicesData = {
         "Build a strong, market-leading brand with AI-driven strategy, identity, and positioning.",
 
       // Services Page Card Content
-      title: "AI Strategic\nBusiness Branding",
+      title: "AI Strategic Business Branding",
+      subtitle: "For Existing Businesses Only",
       description:
         "Transform existing businesses into scalable, AI-driven brands through strategy, identity, content, marketing, and growth systems.",
       
+      purpose: {
+        title: "Purpose",
+        text: "Transform existing businesses into scalable, AI-driven brands through strategy, identity, content, marketing, and growth systems."
+      },
       process: [
         {
           step: "01",
           name: "Rebranding",
           icon: <RefreshCw className="w-5 h-5 stroke-[2.5]" />,
-          detail: "Objective: Refresh and reposition an existing brand for today's market.",
+          detail: "Refresh and reposition an existing brand for today's market.",
           services: [
             "Brand Strategy Audit",
             "Brand Repositioning",
@@ -53,7 +61,7 @@ export const servicesData = {
           step: "02",
           name: "Podcast Branding",
           icon: <Mic className="w-5 h-5 stroke-[2.5]" />, 
-          detail: "Objective: Build trust and authority through strategic storytelling.",
+          detail: "Build trust and authority through strategic storytelling.",
           services: [
             "Founder Story Development",
             "Brand Story Creation",
@@ -68,7 +76,7 @@ export const servicesData = {
           step: "03",
           name: "Social Media Branding",
           icon: <Share2 className="w-5 h-5 stroke-[2.5]" />, 
-          detail: "Objective: Create a consistent and recognizable digital brand presence.",
+          detail: "Create a consistent and recognizable digital brand presence.",
           services: [
             "Social Media Brand Strategy",
             "Social Media Profile Optimization",
@@ -84,7 +92,7 @@ export const servicesData = {
           step: "04",
           name: "Brand Marketing",
           icon: <Megaphone className="w-5 h-5 stroke-[2.5]" />, 
-          detail: "Objective: Turn branding into measurable business growth.",
+          detail: "Turn branding into measurable business growth.",
           services: [
             "Marketing Strategy",
             "Campaign Planning",
@@ -100,7 +108,7 @@ export const servicesData = {
           step: "05",
           name: "Business Growth",
           icon: <TrendingUp className="w-5 h-5 stroke-[2.5]" />, 
-          detail: "Objective: Develop a structured execution plan that transforms strategy into measurable business growth.",
+          detail: "Develop a structured execution plan that transforms strategy into measurable business growth through optimized workflows, performance management, and scalable systems.",
           services: [
             "Business Growth Strategy",
             "Execution Roadmap",
@@ -113,7 +121,6 @@ export const servicesData = {
           ]
         }
       ],
-
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -142,34 +149,21 @@ export const servicesData = {
         "Build a strong personal identity, authority, and influence using an AI-driven strategic branding ecosystem.",
 
       // Services Page Card Content
-      title: "AI Strategic\nPersonal Branding",
-      subtitle:"For Founders, Entrepreneurs, Professionals, Creators & Public Figures",
+      title: "AI Strategic Personal Branding",
+      subtitle: "For Founders, Entrepreneurs, Professionals, Creators & Public Figures",
       description:
-        "We help founders, professionals, creators, and industry experts build influential personal brands that attract opportunities, partnerships, and authority.",
+        "Build a strong personal identity, authority, and influence using an AI-driven strategic branding ecosystem.",
       
-      // Added Purpose field with matching target icon from image_91eba6.png
       purpose: {
         title: "Purpose",
-        icon: <Target className="w-6 h-6 stroke-[2.5]" />,
         text: "Build a strong personal identity, authority, and influence using an AI-driven strategic branding ecosystem."
       },
-
-      overview:
-        "Your reputation is your biggest asset. We use AI-driven insights to uncover your unique value proposition, scaling your personal narrative into a recognizable, authoritative brand.",
-      
-      deliverables: [
-        "Personal Brand Strategy",
-        "Content Pillar Architecture",
-        "Social Media Identity Kit",
-        "Thought Leadership Framework"
-      ],
-      
       process: [
         {
           step: "01",
           name: "Personal Brand Development",
           icon: <UserCheck className="w-5 h-5 stroke-[2.5]" />,
-          detail: "Objective: Build confidence, clarity, and leadership.",
+          detail: "Build confidence, clarity, and leadership.",
           services: [
             "Personality Assessment",
             "Confidence Building",
@@ -185,7 +179,7 @@ export const servicesData = {
           step: "02",
           name: "Personal Story Branding",
           icon: <Mic className="w-5 h-5 stroke-[2.5]" />,
-          detail: "Objective: Turn your journey into your strongest brand asset through podcast.",
+          detail: "Turn your journey into your strongest brand asset through podcast storytelling.",
           services: [
             "Founder Story",
             "Personal Story",
@@ -200,7 +194,7 @@ export const servicesData = {
           step: "03",
           name: "Content & Vlog Branding",
           icon: <Video className="w-5 h-5 stroke-[2.5]" />,
-          detail: "Objective: Build authority through consistent content.",
+          detail: "Build authority through consistent content creation.",
           services: [
             "Vlog Strategy",
             "Educational Content",
@@ -216,7 +210,7 @@ export const servicesData = {
           step: "04",
           name: "Personal Brand Promotion",
           icon: <Megaphone className="w-5 h-5 stroke-[2.5]" />,
-          detail: "Objective: Increase visibility and authority.",
+          detail: "Increase visibility and brand authority across networks.",
           services: [
             "Social Media Branding",
             "Profile Optimization",
@@ -232,7 +226,7 @@ export const servicesData = {
           step: "05",
           name: "Personal Brand Growth",
           icon: <TrendingUp className="w-5 h-5 stroke-[2.5]" />,
-          detail: "Objective: Scale your personal brand through a structured growth strategy that strengthens visibility, credibility, influence, and long-term career opportunities.",
+          detail: "Scale your personal brand through a structured growth strategy that strengthens visibility, credibility, influence, and long-term career opportunities.",
           services: [
             "Growth Strategy",
             "Execution Roadmap",
@@ -245,8 +239,6 @@ export const servicesData = {
           ]
         }
       ],
-      
-
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -264,5 +256,125 @@ export const servicesData = {
         </svg>
       ),
     },
+    {
+      id: "startup-branding",
+      number: "03", 
+
+      // Home Page Slideshow Content
+      dynamicTitle: "Startup Branding.",
+      rightTitle: "STARTUP BRANDING",
+      rightDesc:
+        "Transform ideas into market-ready startups through AI-driven strategy, branding, validation, and growth.",
+
+      // Services Page Card Content
+      title: "AI Strategic Startup Branding",
+      subtitle: "For Startups, Innovators & Early-Stage Founders",
+      description:
+        "Transform ideas into market-ready startups through AI-driven strategy, branding, validation, and growth.",
+      
+      purpose: {
+        title: "Purpose",
+        text: "Transform ideas into market-ready startups through AI-driven strategy, branding, validation, and growth."
+      },
+      process: [
+        {
+          step: "01",
+          name: "Startup Idea Development",
+          icon: <Lightbulb className="w-5 h-5 stroke-[2.5]" />,
+          detail: "Validate and strengthen startup ideas before execution.",
+          services: [
+            "Idea Validation",
+            "Problem Identification",
+            "Market Research",
+            "Market Opportunity Assessment",
+            "Business Model Development",
+            "Startup Concept Refinement",
+            "MVP Planning",
+            "Execution Roadmap"
+          ]
+        },
+        {
+          step: "02",
+          name: "Startup Consulting",
+          icon: <Users className="w-5 h-5 stroke-[2.5]" />, 
+          detail: "Build the startup foundation.",
+          services: [
+            "Startup Strategy",
+            "Brand Value Proposition",
+            "Business Planning",
+            "Brand Naming",
+            "Legal & Compliance Guidance",
+            "Go-to-Market Strategy",
+            "Pricing Strategy",
+            "Startup Brand Identity",
+            "Investor Readiness"
+          ]
+        },
+        {
+          step: "03",
+          name: "Startup Brand Identity",
+          icon: <PenTool className="w-5 h-5 stroke-[2.5]" />, 
+          detail: "Create a professional startup brand.",
+          services: [
+            "Logo Design",
+            "Brand Identity System",
+            "Brand Guidelines",
+            "Stationery Design",
+            "Company Profile",
+            "Brochure Design",
+            "Marketing Collateral"
+          ]
+        },
+        {
+          step: "04",
+          name: "Startup Digital Branding",
+          icon: <Megaphone className="w-5 h-5 stroke-[2.5]" />, 
+          detail: "Build a strong online presence before scaling.",
+          services: [
+            "Social Media Branding",
+            "Website Strategy",
+            "Content Strategy",
+            "Launch Campaign",
+            "Startup Storytelling",
+            "Community Building"
+          ]
+        },
+        {
+          step: "05",
+          name: "Startup Scaling Strategy",
+          icon: <TrendingUp className="w-5 h-5 stroke-[2.5]" />, 
+          detail: "Scale startups through strategic planning, operational excellence, and sustainable business growth.",
+          services: [
+            "Scaling Roadmap",
+            "KPI Planning",
+            "Growth Systems",
+            "AI Workflow Strategy",
+            "Operational Planning",
+            "Expansion Strategy",
+            "Marketing Campaigns",
+            "Partnership Strategy",
+            "Performance Tracking",
+            "Continuous Optimization"
+          ]
+        }
+      ],
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <circle cx="12" cy="12" r="10" />
+          <circle cx="12" cy="12" r="6" />
+          <circle cx="12" cy="12" r="2" />
+        </svg>
+      ),
+    }
   ],
 };

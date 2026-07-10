@@ -8,8 +8,8 @@
 @font-face {
   font-family: "BAHAMAS_LIGHT";
   src: url("/fonts/BahamasLight-Regular.ttf") format("truetype");
-  font-display: swap;
 }
+
 @font-face {
   font-family: "BAHAMAS_HEAVY";
   src: url("/fonts/BahamasHeavy-Regular.ttf") format("truetype");
