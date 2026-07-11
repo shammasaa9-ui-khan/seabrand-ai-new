@@ -19,10 +19,13 @@ export default function CareersHeader() {
         <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-50 border border-zinc-200 text-sm font-semibold text-zinc-600 mb-8">
           Be Part of Us
         </motion.div>
-        <motion.h1 variants={fadeUp} className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-black leading-[0.95] mb-8">
-          Do the best work <br className="hidden md:block" />
-          <span className="text-[#A899FF]">of your life.</span>
-        </motion.h1>
+             <motion.h1 
+              variants={fadeUp} 
+              className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-black leading-[0.95] mb-8"
+            >
+              Do the best work <br className="hidden md:block" />
+              <span className="text-[#A899FF]">of your life.</span>
+            </motion.h1>
       </motion.div>
     </section>
   );

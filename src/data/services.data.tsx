@@ -149,15 +149,16 @@ export const servicesData = {
         "Build a strong personal identity, authority, and influence using an AI-driven strategic branding ecosystem.",
 
       // Services Page Card Content
-      title: "AI Strategic Personal Branding",
-      subtitle: "For Founders, Entrepreneurs, Professionals, Creators & Public Figures",
-      description:
-        "Build a strong personal identity, authority, and influence using an AI-driven strategic branding ecosystem.",
-      
-      purpose: {
-        title: "Purpose",
-        text: "Build a strong personal identity, authority, and influence using an AI-driven strategic branding ecosystem."
-      },
+      // Services Page Card Content
+title: "AI Strategic Personal Branding",
+subtitle: (
+  <div style={{ textAlign: 'center' }}>
+    For Founders, Entrepreneurs, Professionals,
+    <br />
+    Creators & Public Figures
+  </div>
+),
+description: "Build a strong personal identity, authority, and influence using an AI-driven strategic branding ecosystem.",
       process: [
         {
           step: "01",

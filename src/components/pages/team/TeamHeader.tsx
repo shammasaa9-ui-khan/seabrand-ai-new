@@ -28,10 +28,13 @@ export default function TeamHeader() {
         {/* <span className="w-2 h-2 rounded-full bg-[#6748FE] animate-pulse" /> */}
         Curators
       </motion.div>
-      <motion.h1 variants={fadeUp} className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-black leading-[0.95] mb-8">
-        The minds behind <br className="hidden md:block" />
-        <span className="text-[#A899FF]">the magic.</span>
-      </motion.h1>
+               <motion.h1 
+              variants={fadeUp} 
+              className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-black leading-[0.95] mb-8"
+            >
+              The minds behind <br className="hidden md:block" />
+              <span className="text-[#A899FF]">the magic.</span>
+            </motion.h1>
       {/* <motion.p variants={fadeUp} className="text-xl text-zinc-500 max-w-2xl leading-relaxed">
         A curated team of strategists, designers, and visionaries dedicated to building brands that defy the ordinary.
       </motion.p> */}

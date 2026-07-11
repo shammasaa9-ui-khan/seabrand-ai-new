@@ -47,7 +47,7 @@ import HeroHeadline from "./HeroHeadline";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-dvh w-full bg-[#FAFAFA] overflow-hidden flex items-center justify-center pt-28 pb-20 selection:bg-[#6748FE]/20">
+    <section className="relative min-h-dvh w-full bg-white overflow-hidden flex items-center justify-center pt-28 pb-20 selection:bg-[#6748FE]/20">
       
       {/* Modular Background with Hover.dev style grid */}
       <HeroBackground />

@@ -33,12 +33,12 @@ export default function AboutHero() {
           </div>
 
           <motion.h1
-            variants={fadeUp}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-black leading-[0.95] mb-8"
-          >
-            Curating the <br className="hidden md:block" />
-            <span className="text-[#A899FF]">future of brands.</span>
-          </motion.h1>
+              variants={fadeUp}
+              className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-black leading-[0.95] mb-8"
+            >
+              Curating the <br className="hidden md:block" />
+              <span className="text-[#A899FF]">future of brands.</span>
+            </motion.h1>
         </motion.div>
 
         {/* Right Content */}

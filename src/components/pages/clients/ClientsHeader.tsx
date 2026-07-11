@@ -33,13 +33,13 @@ export default function ClientsHeader() {
           Our Partners
         </motion.div>
 
-        <motion.h1
-          variants={fadeUp}
-          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-black leading-[0.95] mb-8"
-        >
-          Brands we <br className="hidden md:block" />
-          <span className="text-[#A899FF]">partner with.</span>
-        </motion.h1>
+            <motion.h1
+              variants={fadeUp}
+              className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-black leading-[0.95] mb-8"
+            >
+              Brands we <br className="hidden md:block" />
+              <span className="text-[#A899FF]">partner with.</span>
+            </motion.h1>
 
         {/* <motion.p variants={fadeUp} className="text-xl text-zinc-500 max-w-2xl leading-relaxed">
           From ambitious startups to global enterprises, we collaborate with visionary teams to build digital experiences that matter.
