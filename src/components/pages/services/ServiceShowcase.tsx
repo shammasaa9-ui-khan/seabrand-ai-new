@@ -1,56 +1,74 @@
 // 
+
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { servicesData } from "@/src/data/services.data";
+import { GLASS_CARD_STYLE } from "@/src/components/shared/LuxuryMarbleBackground";
+
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
 
 export default function ServicesShowcase() {
   return (
-    <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 mb-20 md:mb-32">
-      <div className="space-y-4 md:space-y-12">
+    <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 md:mb-32">
+      <div className="grid grid-cols-1 gap-6">
         {servicesData.services.map((service, index) => (
           <motion.div
             key={service.id}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.6,
-              delay: index * 0.1,
-            }}
-            className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-8 md:py-16 border-t border-zinc-200 items-center group"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={fadeUp}
+            transition={{ delay: index * 0.1 }}
+            className="relative overflow-hidden rounded-[2rem] group transition-all duration-500"
+            style={GLASS_CARD_STYLE}
           >
-            {/* Service Number */}
-            <div className="md:col-span-2">
-              <span className="text-5xl md:text-6xl font-thin text-zinc-300 group-hover:text-[#6748FE] transition-colors duration-300">
-                {service.number}
-              </span>
-            </div>
+            <div
+              className="absolute -inset-px rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+              style={{ boxShadow: "0 0 80px rgba(103,72,254,0.55)" }}
+            />
 
-            {/* Service Content */}
-            <div className="md:col-span-6">
-              <h3 className="text-2xl md:text-3xl font-bold text-zinc-900 mb-3 md:mb-4">
-                {service.title}
-              </h3>
-              <p className="text-zinc-600 leading-relaxed text-sm md:text-base">
-                {service.description}
-              </p>
-            </div>
+            {/* ഇവിടുണ്ടായിരുന്ന SVG ആർക്ക് ലൈൻ നീക്കം ചെയ്തു */}
 
-            {/* Button */}
-            <div className="md:col-span-4 flex md:justify-end pt-2 md:pt-0">
-              <Link
-                href={`/services/${service.id}`}
-                // {/* 
-                //   - Changed px-8 py-3 to px-5 py-2 for a smaller, compact size.
-                //   - Removed w-full so it fits the content tightly on mobile screens.
-                //   - Added text-sm for clean typography matching the reduced size.
-                // */}
-                className="inline-flex items-center justify-center px-5 py-2 rounded-lg border text-sm font-medium transition-all duration-300 text-center bg-black text-white border-black md:bg-transparent md:text-zinc-900 md:border-zinc-300 md:hover:bg-black md:hover:text-white md:hover:border-black"
-              >
-                Explore Details
-              </Link>
+            <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 p-6 md:p-8 items-center">
+              <div className="md:col-span-2 flex md:justify-center">
+                <span className="text-5xl md:text-6xl font-thin text-[#6748FE]/60 group-hover:text-[#6748FE] transition-colors duration-300">
+                  {service.number}
+                </span>
+              </div>
+
+              <div className="md:col-span-6">
+                <h3 className="text-2xl md:text-3xl font-extrabold text-white mb-3 md:mb-4 tracking-tight">
+                  {service.title}
+                </h3>
+                <p className="text-slate-300 leading-relaxed text-sm md:text-base">
+                  {service.description}
+                </p>
+              </div>
+
+              <div className="md:col-span-4 flex md:justify-end pt-2 md:pt-0">
+                <Link
+                  href={`/services/${service.id}`}
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 text-white border border-white/20 hover:border-[#6748FE]/50 hover:shadow-[0_0_30px_rgba(103,72,254,0.4)] w-full md:w-auto"
+                  style={{
+                    background:
+                      "linear-gradient(145deg, rgba(103,72,254,0.25) 0%, rgba(8,22,49,0.8) 100%)",
+                    backdropFilter: "blur(12px)",
+                  }}
+                >
+                  Explore Details
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                </Link>
+              </div>
             </div>
           </motion.div>
         ))}

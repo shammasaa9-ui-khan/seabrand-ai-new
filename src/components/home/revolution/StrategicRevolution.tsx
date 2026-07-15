@@ -1,35 +1,5 @@
 
-// "use client";
-
-// import RevolutionBackground from "./RevolutionBackground";
-// import RevolutionHeader from "./RevolutionHeader";
-// import RevolutionStatsGrid from "./RevolutionStatsGrid";
-
-// export default function StrategicRevolution() {
-//   return (
-//     <section
-//       className="py-24 md:py-20 bg-[#050505] relative overflow-hidden w-full"
-//       id="impact"
-//     >
-//       {/* 1. Background Elements */}
-//       <RevolutionBackground />
-
-//       {/* ✅ FIXED: Universal Container applied */}
-//       <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 relative z-10">
-//         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
-          
-//           <RevolutionHeader />
-          
-//           <RevolutionStatsGrid />
-          
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-// "use client";
-
+import LuxuryMarbleBackground from "@/src/components/shared/LuxuryMarbleBackground";
 import RevolutionBackground from "./RevolutionBackground";
 import RevolutionHeader from "./RevolutionHeader";
 import RevolutionStatsGrid from "./RevolutionStatsGrid";
@@ -38,10 +8,10 @@ export default function StrategicRevolution() {
   return (
     <section
       /* ✅ FIXED: Changed py-24 to pt-16 pb-12 for mobile. md:py-20 (Laptop) remains untouched. */
-      className="pt-16 pb-12 md:py-20 bg-[#050505] relative overflow-hidden w-full"
+      className="pt-16 pb-12 md:py-20 relative overflow-hidden w-full bg-gradient-to-br from-[#020617] via-[#071A3D] to-[#020617]"
       id="impact"
     >
-      {/* 1. Background Elements */}
+      <LuxuryMarbleBackground scoped />
       <RevolutionBackground />
 
       {/* Universal Container applied */}

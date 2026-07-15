@@ -1,27 +1,3 @@
-// import Link from "next/link";
-// import Image from "next/image";
-
-// export default function FooterBrand() {
-//   return (
-//     <div className="lg:col-span-5 flex flex-col gap-10 text-zinc-400 text-[15px] leading-relaxed lg:pr-8">
-//       {/* Logo Section */}
-//       <div className="flex flex-col gap-5">
-//         <Link href="/" className="inline-block w-fit">
-//           <Image
-//             src="/images/logo-white.png"
-//             alt="SeaBrand Logo"
-//             width={200}
-//             height={100}
-//             priority
-//             className="w-[90px] sm:w-[110px] md:w-[150px] lg:w-[200px] h-auto object-contain brightness-0 invert"
-//           />
-//         </Link>
-//       </div>
-
-//     </div>
-//   );
-// }
-
 import Link from "next/link";
 import Image from "next/image";
 

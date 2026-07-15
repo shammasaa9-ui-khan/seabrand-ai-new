@@ -2,15 +2,15 @@
 
 "use client";
 
+import LuxuryMarbleBackground from "@/src/components/shared/LuxuryMarbleBackground";
 import ExpertiseBackground from "./ExpertiseBackground";
 import ExpertiseHeader from "./ExpertiseHeader";
 import ExpertiseGrid from "./ExpertiseGrid";
 
 export default function ExpertiseSection() {
   return (
-    <section className="pt-20 pb-0 bg-[#050505] relative overflow-hidden w-full">
-      
-      {/* 1. Background Elements */}
+    <section className="pt-20 pb-0 relative overflow-hidden w-full bg-gradient-to-br from-[#020617] via-[#071A3D] to-[#020617]">
+      <LuxuryMarbleBackground scoped />
       <ExpertiseBackground />
 
       {/* ✅ FIXED: Reduced mobile padding to pb-4 to bring the bottom section area completely up */}

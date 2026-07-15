@@ -9,6 +9,9 @@ import ServicesCTA from "./ServiceCTA";
 import ServicesModal from "./ServicesModal";
 import { servicesData } from "@/src/data/services.data";
 import { Target } from "lucide-react";
+import LuxuryMarbleBackground, {
+  GLASS_CARD_STYLE,
+} from "@/src/components/shared/LuxuryMarbleBackground";
 
 
 interface ProcessStep {
@@ -268,116 +271,7 @@ to-[#020617]
 
 
 
-{/* BACKGROUND */}
-
-<div className="
-absolute
-inset-0
-pointer-events-none
-overflow-hidden
-">
-
-
-<motion.img
-
-src="/bg-luxury.jpg"
-
-alt="background"
-
-className="
-absolute
-w-[120vw]
-h-[120vh]
-
-object-cover
-
-opacity-30
-
-mix-blend-screen
-"
-
-
-animate={{
-
-x:[0,20,-20,0],
-
-y:[0,-20,20,0],
-
-scale:[1,1.03,1]
-
-}}
-
-
-transition={{
-
-duration:25,
-
-repeat:Infinity,
-
-ease:"easeInOut"
-
-}}
-
-/>
-
-
-
-
-<div className="
-absolute
-inset-0
-
-bg-gradient-to-b
-
-from-[#020617]/40
-
-via-[#071A3D]/70
-
-to-[#020617]
-
-"/>
-
-
-
-<div className="
-absolute
-top-20
-left-10
-
-w-80
-h-80
-
-bg-blue-500/20
-
-rounded-full
-
-blur-[120px]
-
-animate-pulse
-"/>
-
-
-
-<div className="
-absolute
-bottom-20
-right-10
-
-w-96
-h-96
-
-bg-purple-500/20
-
-rounded-full
-
-blur-[140px]
-
-animate-pulse
-"/>
-
-
-
-</div>
+<LuxuryMarbleBackground />
 
 
 
@@ -438,6 +332,7 @@ leading-tight
 <div className="
 flex
 items-center
+justify-center
 gap-4
 
 w-full
@@ -457,15 +352,8 @@ bg-white/20
 
 
 <span
-  className="px-6 py-2 rounded-full text-xs md:text-sm uppercase tracking-widest font-semibold text-center"
-  style={{
-    background: "linear-gradient(145deg, rgba(8, 22, 49, 0.75) 0%, rgba(3, 9, 21, 0.92) 60%, rgba(0, 0, 0, 0.98) 100%)",
-    backdropFilter: "blur(24px)",
-    WebkitBackdropFilter: "blur(24px)",
-    border: "1px solid rgba(103,72,254,0.30)",
-    boxShadow: "0 0 25px rgba(103,72,254,0.4)",
-    color: "#ffffff",
-  }}
+  className="px-6 py-2 rounded-full text-xs md:text-sm uppercase tracking-widest font-semibold text-center text-white"
+  style={{ ...GLASS_CARD_STYLE, boxShadow: "0 0 25px rgba(103,72,254,0.4)" }}
 >
 
 {serviceSubtitle}
@@ -494,15 +382,16 @@ bg-white/20
 
 
 <div
-  className="relative overflow-hidden w-full max-w-4xl p-5 md:p-7 rounded-[2rem] group"
-  style={{
-    background: "linear-gradient(145deg, rgba(8, 22, 49, 0.75) 0%, rgba(3, 9, 21, 0.92) 60%, rgba(0, 0, 0, 0.98) 100%)",
-    backdropFilter: "blur(24px)",
-    WebkitBackdropFilter: "blur(24px)",
-    border: "1px solid rgba(103,72,254,0.30)",
-    boxShadow: "0 0 60px rgba(103,72,254,0.30), 0 30px 80px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.10)",
-  }}
+  className="relative overflow-hidden w-full max-w-4xl p-5 md:p-7 rounded-[2rem] group mx-auto mb-16"
+  style={GLASS_CARD_STYLE}
 >
+
+    {/* Purple ambient glow behind card */}
+    <div
+      className="absolute -inset-px rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+      style={{ boxShadow: "0 0 80px rgba(103,72,254,0.55)" }}
+    />
+
 
 
 {/* glass shine */}
@@ -675,13 +564,7 @@ return (
       group
       ${isLastOdd ? "lg:col-span-2 max-w-4xl mx-auto w-full" : ""}
     `}
-    style={{
-      background: "linear-gradient(145deg, rgba(8, 22, 49, 0.75) 0%, rgba(3, 9, 21, 0.92) 60%, rgba(0, 0, 0, 0.98) 100%)",
-      backdropFilter: "blur(24px)",
-      WebkitBackdropFilter: "blur(24px)",
-      border: "1px solid rgba(103,72,254,0.30)",
-      boxShadow: "0 0 60px rgba(103,72,254,0.30), 0 30px 80px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.10)",
-    }}
+    style={GLASS_CARD_STYLE}
   >
 
     {/* Purple ambient glow behind card */}

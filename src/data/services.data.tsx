@@ -7,20 +7,14 @@ import {
   TrendingUp, 
   UserCheck, 
   Video, 
-  Target, 
   Users,
   Lightbulb,
-  PenTool
+  PenTool,
+  UserCog,
+  Search
 } from "lucide-react";
 
 export const servicesData = {
-  header: {
-    badge: "Our Services",
-    title: "AI Strategic\nPowered Branding",
-    objective: "Refresh and reposition an existing brand for today's market.",
-    description:
-      "From data-driven business positioning to personalized identity workflows—we deliver end-to-end strategic branding tailored to your goals.",
-  },
   services: [
     {
       id: "business-branding",
@@ -376,6 +370,124 @@ description: "Build a strong personal identity, authority, and influence using a
           <circle cx="12" cy="12" r="2" />
         </svg>
       ),
+    },
+    {
+  id: "entertainment-branding",
+  number: "04", 
+
+  // Home Page Slideshow Content
+  dynamicTitle: "Entertainment Branding.",
+  rightTitle: "AI STRATEGIC ENTERTAINMENT BRANDING",
+  rightDesc:
+    "Build an entertainment brand with AI-driven strategy, content, audience growth, and monetization.",
+
+  // Services Page Card Content
+  title: "AI Strategic Entertainment Branding",
+  subtitle: "For Creators, Artists, Influencers, Celebrities, Production Houses & Entertainment Brands",
+  description:
+    "Build an entertainment brand with AI-driven strategy, content, audience growth, and monetization.",
+  
+  purpose: {
+    title: "Purpose",
+    text: "Build an entertainment brand with AI-driven strategy, content, audience growth, and monetization."
+  },
+  process: [
+    {
+      step: "01",
+      name: "Content Strategy & Research",
+      icon: <Search className="w-5 h-5 stroke-[2.5]" />, 
+      detail: "Build content around audience demand.",
+      services: [
+        "Topic Research",
+        "Trend Analysis",
+        "Content Ideation",
+        "Content Calendar",
+        "Series Planning",
+        "Audience Research",
+        "Niche Positioning",
+        "AI Content Planning"
+      ]
+    },
+    {
+      step: "02",
+      name: "Creator Setup",
+      icon: <UserCog className="w-5 h-5 stroke-[2.5]" />, 
+      detail: "Build a professional digital presence.",
+      services: [
+        "Social Media Account Setup",
+        "Profile Optimization",
+        "Channel Branding",
+        "Platform Strategy",
+        "Creator Identity",
+        "Brand Positioning",
+        "Platform Integration"
+      ]
+    },
+    {
+      step: "03",
+      name: "Content Branding",
+      icon: <PenTool className="w-5 h-5 stroke-[2.5]" />, 
+      detail: "Build a recognizable creator brand.",
+      services: [
+        "Visual Identity",
+        "Thumbnail Strategy",
+        "Poster Design",
+        "Reels & Shorts Branding",
+        "Creative Direction",
+        "Audience Growth",
+        "Campaign Planning"
+      ]
+    },
+    {
+      step: "04",
+      name: "Audience Engagement",
+      icon: <Users className="w-5 h-5 stroke-[2.5]" />, 
+      detail: "Grow audience and visibility.",
+      services: [
+        "Social Media Marketing",
+        "Performance Campaigns",
+        "Audience Growth",
+        "Community Building",
+        "Fan Engagement",
+        "Influencer Collaboration Strategy",
+        "Lead Generation",
+        "Content Distribution"
+      ]
+    },
+    {
+      step: "05",
+      name: "Growth Strategy",
+      icon: <TrendingUp className="w-5 h-5 stroke-[2.5]" />, 
+      detail: "Accelerate creator growth through structured strategies, audience engagement, and sustainable brand development.",
+      services: [
+        "Creator Growth Strategy",
+        "Platform Scaling",
+        "Brand Partnerships",
+        "Monetization Strategy",
+        "Sponsorship Planning",
+        "Audience Retention",
+        "Long-term Roadmap"
+      ]
     }
   ],
+  // 
+  icon: (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+      <circle cx="12" cy="12" r="3" />
+    </svg>
+  ),
+}
+  ],
+  
 };

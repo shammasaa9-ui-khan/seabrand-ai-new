@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-bahamas`}>
+      <body className={`${inter.variable} font-bahamas-light text-white`}>
         <Navbar />
         <main>{children}</main>
         <Footer />

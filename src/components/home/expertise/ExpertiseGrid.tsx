@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { steps } from "@/src/data/expertize.data";
+import { GLASS_CARD_STYLE } from "@/src/components/shared/LuxuryMarbleBackground";
 
 export default function ExpertiseGrid() {
   return (
@@ -40,16 +41,43 @@ export default function ExpertiseGrid() {
               group
               relative
               overflow-hidden
-              rounded-3xl
-              border border-white/10
-              bg-white/[0.03]
-              backdrop-blur-xl
-              shadow-[0_8px_32px_rgba(0,0,0,0.5)]
+              rounded-[2rem]
+              transition-all duration-500
               px-5 py-6
               sm:px-6 sm:py-7
               lg:p-10
             "
+            style={GLASS_CARD_STYLE}
           >
+            {/* Marble texture inside card */}
+            <div
+              className="absolute inset-0 opacity-25 mix-blend-screen pointer-events-none"
+              style={{
+                background: `
+                  radial-gradient(ellipse at 25% 40%, rgba(103,72,254,0.18) 0%, transparent 55%),
+                  radial-gradient(ellipse at 75% 25%, rgba(255,255,255,0.10) 0%, transparent 45%),
+                  radial-gradient(ellipse at 55% 75%, rgba(59,130,246,0.12) 0%, transparent 50%),
+                  radial-gradient(ellipse at 15% 85%, rgba(139,92,246,0.10) 0%, transparent 40%),
+                  linear-gradient(160deg, #0a1628 0%, #071A3D 40%, #020617 100%)
+                `,
+              }}
+            />
+            <img
+              src="/bg-luxury.png"
+              alt=""
+              aria-hidden
+              className="absolute inset-0 h-full w-full object-cover opacity-20 mix-blend-screen pointer-events-none"
+            />
+
+            {/* Purple ambient glow behind card */}
+            <div
+              className="absolute -inset-px rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+              style={{ boxShadow: "0 0 80px rgba(103,72,254,0.55)" }}
+            />
+
+            {/* Glass shine */}
+            <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-30 pointer-events-none" />
+
             {/* Watermark */}
             <span className="pointer-events-none absolute -bottom-3 -right-3 text-7xl font-black text-white/[0.03] transition-all duration-500 group-hover:scale-110 group-hover:text-white/[0.06] sm:text-8xl lg:-bottom-4 lg:-right-4 lg:text-9xl">
               {step.number}

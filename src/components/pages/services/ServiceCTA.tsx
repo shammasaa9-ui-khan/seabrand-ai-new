@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 interface ServiceCTAProps {
@@ -10,17 +7,22 @@ interface ServiceCTAProps {
 export default function ServiceCTA({ onOpenModal }: ServiceCTAProps) {
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-20 md:pb-32 relative z-10">
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        
-        // Changed background to black
-        className="relative bg-black backdrop-blur-3xl rounded-[1.8rem] md:rounded-[2.5rem] p-6 sm:p-12 md:p-20 overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 md:gap-10 border border-white/[0.08] shadow-[0_30px_100px_rgba(0,0,0,0.8)]"
+      <div
+        className="group relative rounded-[1.8rem] md:rounded-[2.5rem] p-6 sm:p-12 md:p-20 overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 md:gap-10 transition-all duration-500"
+        style={{
+          background: "#000000",
+          backdropFilter: "blur(24px)",
+          WebkitBackdropFilter: "blur(24px)",
+          border: "1px solid rgba(103,72,254,0.30)",
+          boxShadow: "0 0 60px rgba(103,72,254,0.30), 0 30px 80px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.10)",
+        }}
       >
-      
-        <div className="absolute -top-24 -right-24 w-96 h-96 bg-purple-600/20 rounded-full blur-[100px] pointer-events-none" />
+
+        {/* Purple ambient glow behind card */}
+        <div
+          className="absolute -inset-px rounded-[1.8rem] md:rounded-[2.5rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+          style={{ boxShadow: "0 0 80px rgba(103,72,254,0.55)" }}
+        />
 
         <div className="relative z-10 max-w-2xl text-center md:text-left">
           {/* Label Tag */}
@@ -48,7 +50,7 @@ export default function ServiceCTA({ onOpenModal }: ServiceCTAProps) {
           Start Project
           <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform duration-300" />
         </button>
-      </motion.div>
+      </div>
     </section>
   );
 }
