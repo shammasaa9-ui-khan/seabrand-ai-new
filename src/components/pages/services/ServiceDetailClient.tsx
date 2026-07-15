@@ -264,9 +264,9 @@ overflow-hidden
 text-white
 
 bg-gradient-to-br
-from-[#020617]
-via-[#071A3D]
-to-[#020617]
+from-blue-600
+via-blue-700
+to-blue-900
 ">
 
 
