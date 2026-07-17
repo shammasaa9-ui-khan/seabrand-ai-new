@@ -12,7 +12,8 @@ export default function PortfolioHeader() {
         transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
         className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl mb-6 md:mb-10 lg:mb-15 font-bold text-white tracking-tight"
       >
-        What We{" "}
+        
+        <span className="tracking-wide">What</span> We{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6748FE] to-[#9b85ff]">
           Curated.
         </span>

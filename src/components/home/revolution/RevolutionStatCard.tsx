@@ -97,8 +97,9 @@ export default function RevolutionStatCard({ stat, index }: StatProps) {
           <AnimatedNumber value={stat.value} suffix={stat.suffix} />
         </div>
 
+        {/* മൊബൈലിൽ മാത്രം ലെറ്റർ സ്പേസിംഗ് കൂട്ടാൻ max-md:tracking-wide ചേർത്തു */}
         <h3
-          className="text-xl font-bold mb-3 tracking-tight"
+          className="text-xl font-bold mb-3 tracking-tight max-md:tracking-wide"
           style={{ color: "#6748FE" }}
         >
           {stat.label}
