@@ -49,7 +49,7 @@ export default function ExpertiseGrid() {
             "
             style={GLASS_CARD_STYLE}
           >
-            {/* Marble texture inside card */}
+            {/* Marble texture and background layers */}
             <div
               className="absolute inset-0 opacity-25 mix-blend-screen pointer-events-none"
               style={{
@@ -69,22 +69,18 @@ export default function ExpertiseGrid() {
               className="absolute inset-0 h-full w-full object-cover opacity-20 mix-blend-screen pointer-events-none"
             />
 
-            {/* Purple ambient glow behind card */}
             <div
               className="absolute -inset-px rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
               style={{ boxShadow: "0 0 80px rgba(103,72,254,0.55)" }}
             />
 
-            {/* Glass shine */}
             <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-30 pointer-events-none" />
 
-            {/* Watermark */}
             <span className="pointer-events-none absolute -bottom-3 -right-3 text-7xl font-black text-white/[0.03] transition-all duration-500 group-hover:scale-110 group-hover:text-white/[0.06] sm:text-8xl lg:-bottom-4 lg:-right-4 lg:text-9xl">
               {step.number}
             </span>
 
             <div className="relative z-10">
-              {/* Icon */}
               <div className="
                 mb-5
                 flex h-11 w-11 items-center justify-center
@@ -103,12 +99,12 @@ export default function ExpertiseGrid() {
                 {step.icon}
               </div>
 
+              {/* Title with responsive letter spacing */}
               {/* Title */}
-              <h3 className="mb-3 text-xl font-bold tracking-tight text-white lg:mb-4 lg:text-3xl">
-                {step.title}
-              </h3>
+<h3 className="mb-4 text-xl font-bold tracking-tight max-md:tracking-[0.06em] text-white lg:mb-4 lg:text-3xl">
+  {step.title}
+</h3>
 
-              {/* Description */}
               <p className="text-sm leading-6 text-zinc-400 sm:text-[15px] lg:text-lg lg:leading-8">
                 {step.description}
               </p>

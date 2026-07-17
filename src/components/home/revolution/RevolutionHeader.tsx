@@ -11,7 +11,8 @@ export default function RevolutionHeader() {
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
       >
-        <h2 className="text-5xl md:text-6xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1] mb-6">
+        {/* Updated tracking classes below */}
+        <h2 className="text-5xl md:text-6xl lg:text-6xl font-extrabold text-white tracking-tight max-md:tracking-[0.03em] leading-[1.1] mb-6">
           Our Strategic <br />
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#6748FE] to-blue-500">
             Revolution.

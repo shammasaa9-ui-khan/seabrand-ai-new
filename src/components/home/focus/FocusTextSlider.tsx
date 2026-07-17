@@ -41,24 +41,24 @@ export default function FocusTextSlider({
       
       {/* Main Headline */}
       <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.7, ease: [0.25, 1, 0.5, 1] }}
-        className="
-          text-center
-          text-3xl sm:text-4xl md:text-5xl lg:text-6xl
-          font-bold text-black
-          leading-[1.2] md:leading-[1.15]
-          tracking-tight
-          max-w-3xl
-          mb-10 md:mb-14
-        "
-      >
-        We&apos;re Passionate About{" "}
-        <span className="text-[#6748FE]">AI Strategic</span>{" "}
-        <span className="text-[#6748FE]">Curation.</span>
-      </motion.h2>
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, margin: "-100px" }}
+  transition={{ duration: 0.7, ease: [0.25, 1, 0.5, 1] }}
+  className="
+    text-center
+    text-3xl sm:text-4xl md:text-5xl lg:text-6xl
+    font-bold text-black
+    leading-[1.2] md:leading-[1.15]
+    tracking-tight max-md:tracking-[0.03em]
+    max-w-3xl
+    mb-10 md:mb-14
+  "
+>
+  We&apos;re Passionate About{" "}
+  <span className="text-[#6748FE]">AI Strategic</span>{" "}
+  <span className="text-[#6748FE]">Curation.</span>
+</motion.h2>
 
       {/* Slider */}
       <div className="relative w-full max-w-4xl overflow-hidden border-t border-b border-zinc-200 py-6 md:py-10">
