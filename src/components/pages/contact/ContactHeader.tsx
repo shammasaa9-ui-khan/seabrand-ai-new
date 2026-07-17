@@ -1,3 +1,7 @@
+// 
+
+
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 
 import { motion } from "framer-motion";
@@ -29,19 +33,17 @@ export default function ContactHeader() {
         variants={fadeUp}
         className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-50 border border-zinc-200 text-sm font-semibold text-zinc-600 mb-8"
       >
-        {/* <span className="w-2 h-2 rounded-full bg-[#6748FE] animate-pulse" /> */}
         Contact Us
       </motion.div>
       <motion.h1
         variants={fadeUp}
-        className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-black leading-[0.95] mb-8"
+        // tracking-tight (Mobile-il spacing)
+        // lg:tracking-tighter (Desktop-il original spacing nilanirthunnu)
+        className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight lg:tracking-tighter text-black leading-[0.95] mb-8"
       >
         Our Curator is Ready <br className="hidden md:block" />
         <span className="text-[#A899FF]">Let's talk.</span>
       </motion.h1>
-      {/* <motion.p variants={fadeUp} className="text-xl text-zinc-500 max-w-2xl leading-relaxed">
-        A curated team of strategists, designers, and visionaries dedicated to building brands that defy the ordinary.
-      </motion.p> */}
     </motion.div>
   );
 }

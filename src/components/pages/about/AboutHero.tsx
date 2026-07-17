@@ -33,12 +33,14 @@ export default function AboutHero() {
           </div>
 
           <motion.h1
-              variants={fadeUp}
-              className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-black leading-[0.95] mb-8"
-            >
-              Curating the <br className="hidden md:block" />
-              <span className="text-[#A899FF]">future of brands.</span>
-            </motion.h1>
+            variants={fadeUp}
+            // tracking-normal (Mobile-il spacing kuraykkunnu)
+            // lg:tracking-tight (Desktop/Laptop-il original spacing)
+            className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-normal lg:tracking-tight text-black leading-[0.95] mb-8"
+          >
+            Curating the <br className="hidden md:block" />
+            <span className="text-[#A899FF]">future of brands.</span>
+          </motion.h1>
         </motion.div>
 
         {/* Right Content */}
@@ -60,7 +62,6 @@ export default function AboutHero() {
             </strong>{" "}
             <br />
             <br />
-            {/* As a subsidiary of Procoder, SeaBrand AI combines branding expertise, artificial intelligence, creativity, and data-driven strategies to create impactful brands that drive growth, engagement, and long-term success. */}
           </p>
         </motion.div>
       </motion.div>

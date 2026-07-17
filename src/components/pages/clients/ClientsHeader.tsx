@@ -32,11 +32,12 @@ export default function ClientsHeader() {
           {/* <span className="w-2 h-2 rounded-full bg-[#6748FE] animate-pulse" /> */}
           Our Partners
         </motion.div>
-
-            <motion.h1
-              variants={fadeUp}
-              className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-black leading-[0.95] mb-8"
-            >
+<motion.h1
+  variants={fadeUp}
+  // tracking-normal ennathinu pakaram tracking-wide upayogichu nokkuka 
+  // athilum error undo ennariyikkaam
+  className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-wide lg:tracking-tight text-black leading-[0.95] mb-8"
+>
               Brands we <br className="hidden md:block" />
               <span className="text-[#A899FF]">partner with.</span>
             </motion.h1>

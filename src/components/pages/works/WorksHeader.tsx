@@ -13,7 +13,7 @@ const fadeUp = {
 
 export default function WorksHeader() {
   return (
-    <section className="mb-16 md:mb-24 ">
+    <section className="mb-16 md:mb-24">
       <motion.div
         initial="hidden"
         animate="visible"
@@ -27,13 +27,14 @@ export default function WorksHeader() {
           variants={fadeUp}
           className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-50 border border-zinc-200 text-sm font-semibold text-zinc-600 mb-8"
         >
-          {/* <span className="w-2 h-2 rounded-full bg-[#6748FE] animate-pulse" /> */}
           Works
         </motion.div>
 
         <motion.h1
           variants={fadeUp}
-          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-black leading-[0.95] mb-8"
+          // tracking-normal: mobile-il space kuraykkunnu
+          // md:tracking-tighter: laptop/desktop-il change varilla (unchanged)
+          className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-normal md:tracking-tighter text-black leading-[0.95] mb-4 md:mb-8"
         >
           Our strategic <br className="hidden md:block" />
           <span className="text-[#A899FF]">curation.</span>

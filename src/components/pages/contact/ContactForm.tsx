@@ -106,6 +106,7 @@ export default function ContactForm() {
   );
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function InputField({ label, ...props }: any) {
   return (
     <div className="flex flex-col gap-3">
