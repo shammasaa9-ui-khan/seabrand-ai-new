@@ -41,24 +41,28 @@ export default function TeamHeader() {
       </motion.div>
 
       <motion.h1
-        variants={fadeUp}
-        className="
-          text-5xl
-          md:text-7xl
-          lg:text-8xl
-          font-bold
-          tracking-[0.08em]
-          sm:tracking-[0.1em]
-          md:tracking-wide
-          lg:tracking-tight
-          text-black
-          leading-[0.95]
-          mb-8
-        "
-      >
-        The minds behind <br className="hidden md:block" />
-        <span className="text-[#A899FF]">the magic.</span>
-      </motion.h1>
+  variants={fadeUp}
+  className="
+    text-5xl
+    md:text-7xl
+    lg:text-8xl
+    font-bold
+    
+    /* Mobile-il normal-il ninnu kurach space kurakkunnu */
+    tracking-tight
+    
+    /* Desktop-il ninakku vendi irunna spacing (change aavilla) */
+    md:tracking-[0.08em]
+    lg:tracking-tight
+    
+    text-black
+    leading-[0.95]
+    mb-8
+  "
+>
+  The minds behind <br className="hidden md:block" />
+  <span className="text-[#A899FF]">the magic.</span>
+</motion.h1>
     </motion.div>
   );
 }

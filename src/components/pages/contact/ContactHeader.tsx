@@ -35,15 +35,18 @@ export default function ContactHeader() {
       >
         Contact Us
       </motion.div>
-      <motion.h1
-        variants={fadeUp}
-        // tracking-tight (Mobile-il spacing)
-        // lg:tracking-tighter (Desktop-il original spacing nilanirthunnu)
-        className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight lg:tracking-tighter text-black leading-[0.95] mb-8"
-      >
-        Our Curator is Ready <br className="hidden md:block" />
-        <span className="text-[#A899FF]">Let's talk.</span>
-      </motion.h1>
+              <motion.h1
+                variants={fadeUp}
+                /* 
+                  - tracking-[0.02em]: Sets a slightly wider letter spacing for mobile.
+                  - md:tracking-tight: Resets to your desired tighter spacing on tablets and above.
+                  - lg:tracking-tighter: Maintains your original extra-tight spacing on large desktops.
+                */
+                className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-[0.02em] md:tracking-tight lg:tracking-tighter text-black leading-[0.95] mb-8"
+              >
+                Our Curator is Ready <br className="hidden md:block" />
+                <span className="text-[#A899FF]">Let's talk.</span>
+              </motion.h1>
     </motion.div>
   );
 }
