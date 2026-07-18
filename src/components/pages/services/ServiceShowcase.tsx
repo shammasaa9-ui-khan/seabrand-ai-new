@@ -37,7 +37,6 @@ export default function ServicesShowcase() {
               style={{ boxShadow: "0 0 80px rgba(103,72,254,0.55)" }}
             />
 
-            {/* ഇവിടുണ്ടായിരുന്ന SVG ആർക്ക് ലൈൻ നീക്കം ചെയ്തു */}
 
             <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 p-6 md:p-8 items-center">
               <div className="md:col-span-2 flex md:justify-center">

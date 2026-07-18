@@ -5,6 +5,7 @@ import { UploadCloud, CheckCircle2, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface CareersApplicationProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   filteredJobs: any[];
   selectedFormJob: string;
   setSelectedFormJob: (val: string) => void;
@@ -41,8 +42,8 @@ export default function CareersApplication({
               Ready to join?
             </h2>
             <p className="text-zinc-500 text-lg leading-relaxed mb-12">
-              Send us your portfolio. If there isn't a role that fits right now,
-              we'll keep you in mind for future openings.
+              Send us your portfolio. If there isn&apos;t a role that fits right now,
+              we&apos;ll keep you in mind for future openings.
             </p>
 
             <div className="flex flex-col items-start">

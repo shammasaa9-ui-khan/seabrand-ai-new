@@ -1,6 +1,3 @@
-// 
-
-
 "use client";
 
 import React, { useState } from "react";
@@ -73,7 +70,7 @@ export default function ServiceDetailClient({ serviceId }: { serviceId: string }
 
   if (!service) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-[#020617] text-white">
+      <div className="min-h-screen flex items-center justify-center bg-[#050e20] text-white">
         <p>Service not found</p>
       </div>
     );
@@ -92,18 +89,19 @@ export default function ServiceDetailClient({ serviceId }: { serviceId: string }
     : fullTitle;
 
   return (
-    <div className="relative min-h-screen overflow-hidden text-white bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900">
-      <LuxuryMarbleBackground />
+    /* backgroundColor #050e20 ചേർത്തിരിക്കുന്നു */
+    <div className="relative min-h-screen bg-[#050e20]">
+      {/* BACKGROUND: Fixed behind everything */}
+      <div className="fixed inset-0 z-0">
+        <LuxuryMarbleBackground />
+      </div>
 
+      {/* CONTENT: Relative and on top */}
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 md:pt-44 pb-20">
         
         {/* HEADER SECTION */}
         <div className="flex flex-col items-center text-center mb-14">
-          <h1 className="
-            text-4xl md:text-6xl font-extrabold 
-            tracking-wider md:tracking-normal 
-            mb-6 max-w-4xl leading-tight
-          ">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-wider md:tracking-normal mb-6 max-w-4xl leading-tight">
             {hasAiStrategic && <span className="block text-[#6748FE] mb-2">AI Strategic</span>}
             <span className="block text-white">{subTitleText}</span>
           </h1>
@@ -153,7 +151,6 @@ export default function ServiceDetailClient({ serviceId }: { serviceId: string }
               >
                 <div className="absolute -inset-px rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{ boxShadow: "0 0 80px rgba(103,72,254,0.55)" }} />
                 
-                {/* CARD BODY */}
                 <div className="relative z-10 flex flex-col flex-1 p-6 md:p-7 pt-9">
                   <div className="flex flex-col items-center text-center mb-4">
                     <CustomGlowingIcon icon={proc.icon} />

@@ -11,18 +11,22 @@ export default function ServicesPage() {
 
   const handleModalOpen = () => {
     setIsModalOpen(true);
-    document.body.style.overflow = "hidden";
+    if (typeof window !== "undefined") document.body.style.overflow = "hidden";
   };
 
   const handleModalClose = () => {
     setIsModalOpen(false);
-    document.body.style.overflow = "unset";
+    if (typeof window !== "undefined") document.body.style.overflow = "unset";
   };
 
   return (
-    <main className="relative min-h-screen overflow-hidden text-white bg-gradient-to-br from-[#020617] via-[#071A3D] to-[#020617] selection:bg-[#6748FE] selection:text-white">
-      <LuxuryMarbleBackground />
+    <main className="relative min-h-screen text-white bg-gradient-to-br from-[#020617] via-[#071A3D] to-[#020617] selection:bg-[#6748FE] selection:text-white">
+      
+      <div className="fixed inset-0 z-0">
+        <LuxuryMarbleBackground />
+      </div>
 
+      
       <div className="relative z-10 pt-36 md:pt-44">
         <ServicesShowcase />
         <ServicesCTA onOpenModal={handleModalOpen} />
