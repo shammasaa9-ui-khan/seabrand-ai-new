@@ -4,7 +4,7 @@ export const filters = ["All", "Onsite", "Remote", "Hybrid"];
 export const jobs = [
   {
     id: "content creator",
-    title: "Contend Creator",
+    title: "Content Creator",
     type: "Full Time",
     location: "Kozhikode / Hybrid",
     department: "Strategy",

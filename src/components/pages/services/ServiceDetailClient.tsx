@@ -1,3 +1,5 @@
+// 
+
 "use client";
 
 import React, { useState } from "react";
@@ -89,7 +91,6 @@ export default function ServiceDetailClient({ serviceId }: { serviceId: string }
     : fullTitle;
 
   return (
-    /* backgroundColor #050e20 ചേർത്തിരിക്കുന്നു */
     <div className="relative min-h-screen bg-[#050e20]">
       {/* BACKGROUND: Fixed behind everything */}
       <div className="fixed inset-0 z-0">
@@ -100,13 +101,13 @@ export default function ServiceDetailClient({ serviceId }: { serviceId: string }
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 md:pt-44 pb-20">
         
         {/* HEADER SECTION */}
-        <div className="flex flex-col items-center text-center mb-14">
+        <div className="flex flex-col items-center text-center mb-6 md:mb-14">
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-wider md:tracking-normal mb-6 max-w-4xl leading-tight">
             {hasAiStrategic && <span className="block text-[#6748FE] mb-2">AI Strategic</span>}
             <span className="block text-white">{subTitleText}</span>
           </h1>
 
-          <div className="flex items-center justify-center gap-4 w-full max-w-3xl mb-10">
+          <div className="flex items-center justify-center gap-4 w-full max-w-3xl mb-4 md:mb-10">
             <div className="hidden sm:block flex-1 h-[1px] bg-white/20" />
             <span
               className="px-6 py-2 rounded-full text-xs md:text-sm uppercase tracking-widest font-semibold text-center text-white"
@@ -117,18 +118,29 @@ export default function ServiceDetailClient({ serviceId }: { serviceId: string }
             <div className="hidden sm:block flex-1 h-[1px] bg-white/20" />
           </div>
 
-          {/* PURPOSE GLASS CARD */}
-          <div className="relative overflow-hidden w-full max-w-4xl p-5 md:p-7 rounded-[2rem] group mx-auto mb-16" style={GLASS_CARD_STYLE}>
-            <div className="absolute -inset-px rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{ boxShadow: "0 0 80px rgba(103,72,254,0.55)" }} />
-            <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-30 pointer-events-none" />
-            <div className="relative z-10 flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-5">
-              <div className="shrink-0 p-3 rounded-full bg-[#6748FE] backdrop-blur-xl border border-white/20 text-white shadow-[0_0_25px_rgba(103,72,254,0.5)]">
-                <Target className="w-6 h-6 stroke-[1.5]" />
-              </div>
-              <p className="text-sm md:text-base text-slate-300 leading-relaxed text-center sm:text-left w-full">
-                <span className="block sm:inline-block font-bold text-[#6748FE] mr-2">{service.purpose?.title || "Purpose"}:</span>
+          {/* PURPOSE SECTION: Mobile (Text only, reduced gap) & Desktop (Original Glass Card) */}
+          <div className="w-full max-w-4xl mx-auto mb-4 md:mb-16">
+            {/* Mobile View: Text only, minimized bottom margin */}
+            <div className="text-left px-2 md:hidden">
+              <p className="text-sm text-slate-300 leading-relaxed">
+                <span className="font-bold text-[#6748FE] mr-1">{service.purpose?.title || "Purpose"}:</span>
                 {service.purpose?.text || service.description}
               </p>
+            </div>
+
+            {/* Desktop View: Retains the original Glass Card layout */}
+            <div className="hidden md:block relative overflow-hidden w-full p-7 rounded-[2rem] group" style={GLASS_CARD_STYLE}>
+              <div className="absolute -inset-px rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{ boxShadow: "0 0 80px rgba(103,72,254,0.55)" }} />
+              <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-30 pointer-events-none" />
+              <div className="relative z-10 flex items-start gap-5">
+                <div className="shrink-0 p-3 rounded-full bg-[#6748FE] backdrop-blur-xl border border-white/20 text-white shadow-[0_0_25px_rgba(103,72,254,0.5)]">
+                  <Target className="w-6 h-6 stroke-[1.5]" />
+                </div>
+                <p className="text-base text-slate-300 leading-relaxed text-left w-full">
+                  <span className="font-bold text-[#6748FE] mr-2">{service.purpose?.title || "Purpose"}:</span>
+                  {service.purpose?.text || service.description}
+                </p>
+              </div>
             </div>
           </div>
         </div>

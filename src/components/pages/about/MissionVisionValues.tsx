@@ -1,130 +1,101 @@
-// "use client";
-
-// import { aboutData } from "@/src/data/about.data";
-
-// export default function MissionVisionValues() {
-//   return (
-    
-//     <section className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 relative z-10 mb-24 md:mb-32 flex flex-col gap-24 lg:gap-32 py-10">
-      
-//       {/* Mission: Text Left, Image Right */}
-//       <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
-//         <div className="w-full lg:w-1/2 flex flex-col lg:pr-8 order-2 lg:order-1">
-//           <div className="w-12 h-[2px] bg-black mb-5"></div>
-//           <h3 className="text-3xl md:text-4xl font-bold text-[#6748FE] mb-6">{aboutData.mission.title}</h3>
-//           <p className="text-lg text-zinc-700 leading-relaxed ">{aboutData.mission.text}</p>
-//         </div>
-//         <div className="w-full lg:w-1/2 relative min-h-[350px] lg:min-h-[450px] rounded-2xl overflow-hidden bg-zinc-200 order-1 lg:order-2">
-//           <img src={aboutData.mission.image} alt={aboutData.mission.alt} className="object-cover w-full h-full absolute inset-0 " />
-//         </div>
-//       </div>
-
-//       {/* Vision: Image Left, Text Right */}
-//       <div className="flex flex-col lg:flex-row-reverse items-center gap-10 lg:gap-16">
-//         <div className="w-full lg:w-1/2 flex flex-col lg:pl-8 order-2 lg:order-1">
-//           <div className="w-12 h-[2px] bg-black mb-5"></div>
-//           <h3 className="text-3xl md:text-4xl font-bold text-[#6748FE] mb-6">{aboutData.vision.title}</h3>
-//           <p className="text-lg text-zinc-700 leading-relaxed">{aboutData.vision.text}</p>
-//         </div>
-//         <div className="w-full lg:w-1/2 relative min-h-[350px] lg:min-h-[450px] rounded-2xl overflow-hidden bg-zinc-200 order-1 lg:order-2">
-//           <img src={aboutData.vision.image} alt={aboutData.vision.alt} className="object-cover w-full h-full absolute inset-0" />
-//         </div>
-//       </div>
-
-//       {/* Values: Text Left, Image Right */}
-//       {/* <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
-//         <div className="w-full lg:w-1/2 flex flex-col lg:pr-8 order-2 lg:order-1">
-//           <div className="w-12 h-[2px] bg-black mb-5"></div>
-//           <h3 className="text-3xl md:text-4xl font-bold text-black mb-6">{aboutData.values.title}</h3>
-//           <ul className="text-lg text-zinc-700 leading-relaxed flex flex-col gap-4">
-//             {aboutData.values.list.map((item, index) => (
-//               <li key={index} className="flex items-start">
-//                 <span className="text-black font-bold mr-2 mt-1">•</span>
-//                 <span><strong className="text-black font-semibold">{item.name}:</strong> {item.desc}</span>
-//               </li>
-//             ))}
-//           </ul>
-//         </div>
-//         <div className="w-full lg:w-1/2 relative min-h-[350px] lg:min-h-[450px] rounded-2xl overflow-hidden bg-zinc-200 order-1 lg:order-2">
-//           <img src={aboutData.values.image} alt={aboutData.values.alt} className="object-cover w-full h-full absolute inset-0" />
-//         </div>
-//       </div> */}
-//     </section>
-//   );
-// }
-
-
-
-
-
-
-
-
+/* eslint-disable @next/next/no-img-element */
 
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
+import { Compass, Eye, ShieldCheck } from "lucide-react";
 import { aboutData } from "@/src/data/about.data";
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1]as const } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } },
 };
 
 export default function MissionVisionValues() {
   return (
-    <section className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 mb-24 md:mb-40">
-      <div className="flex flex-col">
+    <section className="w-full text-slate-100 pt-10 md:pt-16 pb-10 md:pb-16 px-6 sm:px-8 lg:px-12 relative selection:bg-[#6748FE] selection:text-white">
+      
+      {/* BACKGROUND GLOW - Top Center Beam */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-gradient-to-b from-[#6748FE]/25 via-blue-600/15 to-transparent rounded-full blur-[100px]" />
+        <div className="absolute bottom-10 right-10 w-[450px] h-[450px] bg-blue-600/20 rounded-full blur-[120px]" />
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10 space-y-12">
         
-        {/* Mission: Architectural Row */}
-        <motion.div 
-          initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp}
-          className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center border-t border-zinc-200 py-16"
-        >
-          {/* Text Left */}
-          <div className="w-full lg:w-5/12 flex flex-col">
-            <span className="text-[#6748FE] text-sm font-bold tracking-widest uppercase mb-4">Our Core Mission</span>
-            <h3 className="text-4xl md:text-5xl font-bold text-black mb-8 tracking-tight leading-tight">
-              {aboutData.mission.title}
-            </h3>
-            <p className="text-xl text-zinc-600 leading-relaxed">
+        {/* HORIZONTAL GRID CONTAINER */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+          
+          {/* Mission Box */}
+          <motion.div 
+            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp}
+            className="group relative flex flex-col justify-between bg-[#0b1221]/80 backdrop-blur-xl border border-white/10 p-8 sm:p-10 rounded-[2rem] shadow-2xl shadow-black/40 hover:border-[#818cf8]/50 transition-all duration-500 hover:-translate-y-1 h-full"
+          >
+            <div className="absolute -inset-px rounded-[2rem] bg-gradient-to-b from-[#818cf8]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+            
+            <div>
+              <div className="p-3.5 rounded-2xl bg-[#6748FE]/10 border border-[#6748FE]/30 mb-6 w-fit group-hover:scale-110 transition-transform duration-300">
+                <Compass className="w-7 h-7 text-[#A78BFA]" />
+              </div>
+
+              <div className="text-xs font-semibold tracking-widest text-[#A78BFA] uppercase mb-1">Our Mission</div>
+              <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight leading-tight">
+                {aboutData.mission.title}
+              </h3>
+            </div>
+
+            <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal mt-2">
               {aboutData.mission.text}
             </p>
-          </div>
-          {/* Image Right (Sleek, minimal rounding) */}
-          <div className="w-full lg:w-7/12 relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-200 group">
-            <img 
-              src={aboutData.mission.image} 
-              alt={aboutData.mission.alt} 
-              className="object-cover w-full h-full absolute inset-0 transition-transform duration-1000 group-hover:scale-105" 
-            />
-          </div>
-        </motion.div>
+          </motion.div>
 
-        {/* Vision: Architectural Row */}
-        <motion.div 
-          initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp}
-          className="flex flex-col lg:flex-row-reverse gap-12 lg:gap-24 items-center border-t border-zinc-200 py-16"
-        >
-          {/* Text Right */}
-          <div className="w-full lg:w-5/12 flex flex-col">
-            <span className="text-[#6748FE] text-sm font-bold tracking-widest uppercase mb-4">The Vision</span>
-            <h3 className="text-4xl md:text-5xl font-bold text-black mb-8 tracking-tight leading-tight">
-              {aboutData.vision.title}
-            </h3>
-            <p className="text-xl text-zinc-600 leading-relaxed">
+          {/* Vision Box */}
+          <motion.div 
+            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp}
+            className="group relative flex flex-col justify-between bg-[#0b1221]/80 backdrop-blur-xl border border-white/10 p-8 sm:p-10 rounded-[2rem] shadow-2xl shadow-black/40 hover:border-[#818cf8]/50 transition-all duration-500 hover:-translate-y-1 h-full"
+          >
+            <div className="absolute -inset-px rounded-[2rem] bg-gradient-to-b from-[#818cf8]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+            <div>
+              <div className="p-3.5 rounded-2xl bg-[#6748FE]/10 border border-[#6748FE]/30 mb-6 w-fit group-hover:scale-110 transition-transform duration-300">
+                <Eye className="w-7 h-7 text-[#A78BFA]" />
+              </div>
+
+              <div className="text-xs font-semibold tracking-widest text-[#A78BFA] uppercase mb-1">Our Vision</div>
+              <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight leading-tight">
+                {aboutData.vision.title}
+              </h3>
+            </div>
+
+            <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal mt-2">
               {aboutData.vision.text}
             </p>
-          </div>
-          {/* Image Left */}
-          <div className="w-full lg:w-7/12 relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-200 group">
-            <img 
-              src={aboutData.vision.image} 
-              alt={aboutData.vision.alt} 
-              className="object-cover w-full h-full absolute inset-0 transition-transform duration-1000 group-hover:scale-105" 
-            />
-          </div>
-        </motion.div>
+          </motion.div>
+
+          {/* Philosophy Box */}
+          <motion.div 
+            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp}
+            className="group relative flex flex-col justify-between bg-[#0b1221]/80 backdrop-blur-xl border border-white/10 p-8 sm:p-10 rounded-[2rem] shadow-2xl shadow-black/40 hover:border-[#818cf8]/50 transition-all duration-500 hover:-translate-y-1 h-full"
+          >
+            <div className="absolute -inset-px rounded-[2rem] bg-gradient-to-b from-[#818cf8]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+            <div>
+              <div className="p-3.5 rounded-2xl bg-[#6748FE]/10 border border-[#6748FE]/30 mb-6 w-fit group-hover:scale-110 transition-transform duration-300">
+                <ShieldCheck className="w-7 h-7 text-[#A78BFA]" />
+              </div>
+
+              <div className="text-xs font-semibold tracking-widest text-[#A78BFA] uppercase mb-1">Philosophy</div>
+              <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight leading-tight">
+                {aboutData.values.title}
+              </h3>
+            </div>
+
+            <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal whitespace-pre-line mt-2">
+              {aboutData.values.text}
+            </p>
+          </motion.div>
+
+        </div>
 
       </div>
     </section>

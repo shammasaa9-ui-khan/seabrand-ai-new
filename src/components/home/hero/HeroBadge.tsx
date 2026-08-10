@@ -38,7 +38,7 @@ export default function HeroBadge() {
         />
         <text className="text-[10.5px] font-bold uppercase tracking-[0.2em] fill-neutral-800">
           <textPath href="#circlePath" startOffset="0%">
-            need a branding curation ? •
+            need a branding curation? •
           </textPath>
         </text>
       </svg>

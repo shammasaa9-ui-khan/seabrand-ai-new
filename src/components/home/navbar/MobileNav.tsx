@@ -27,14 +27,14 @@ const menuVariants: Variants = {
   closed: {
     y: "-100%",
     transition: {
-      duration: 0.5,
+      duration: 0.4,
       ease: [0.76, 0, 0.24, 1],
     },
   },
   open: {
     y: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.4,
       ease: [0.76, 0, 0.24, 1],
     },
   },
@@ -45,7 +45,7 @@ const submenuVariants: Variants = {
     height: 0,
     opacity: 0,
     transition: {
-      duration: 0.3,
+      duration: 0.2,
       ease: "easeInOut",
     },
   },
@@ -53,7 +53,7 @@ const submenuVariants: Variants = {
     height: "auto",
     opacity: 1,
     transition: {
-      duration: 0.3,
+      duration: 0.2,
       ease: "easeInOut",
     },
   },
@@ -88,9 +88,9 @@ export default function MobileNav({
           animate="open"
           exit="closed"
           variants={menuVariants}
-          className="fixed top-20 left-5 right-5 bottom-0 z-40 flex flex-col overflow-hidden rounded-b-2xl border-t border-gray-100 bg-white shadow-xl"
+          className="fixed top-16 left-4 right-4 z-40 flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-xl max-h-[75vh]"
         >
-          <nav className="flex-1 overflow-y-auto px-6 py-6">
+          <nav className="flex-1 overflow-y-auto px-5 py-4">
             <ul className="flex flex-col">
               {(mobileNavLinks as NavLinkItem[]).map((link, index) => {
                 const hasSubLinks = !!link.subLinks?.length;
@@ -103,16 +103,16 @@ export default function MobileNav({
                 return (
                   <motion.li
                     key={link.name}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 10 }}
                     animate={{
                       opacity: 1,
                       y: 0,
                       transition: {
-                        delay: index * 0.05,
-                        duration: 0.4,
+                        delay: index * 0.04,
+                        duration: 0.3,
                       },
                     }}
-                    exit={{ opacity: 0, y: 20 }}
+                    exit={{ opacity: 0, y: 10 }}
                     className="border-b border-gray-100 last:border-none"
                   >
                     <Link
@@ -120,7 +120,7 @@ export default function MobileNav({
                       onClick={(e) =>
                         handleMenuClick(link.name, hasSubLinks, e)
                       }
-                      className={`group flex items-center justify-between py-5 text-lg transition-colors ${
+                      className={`group flex items-center justify-between py-3.5 text-base transition-colors ${
                         isActive
                           ? "font-semibold text-[#6748FE]"
                           : "font-medium text-gray-900 hover:text-[#6748FE]"
@@ -130,7 +130,7 @@ export default function MobileNav({
 
                       {hasSubLinks && (
                         <ChevronDown
-                          className={`h-5 w-5 transition-transform duration-300 ${
+                          className={`h-4 w-4 transition-transform duration-300 ${
                             isExpanded
                               ? "rotate-180 text-[#6748FE]"
                               : "text-gray-400 group-hover:text-[#6748FE]"
@@ -148,7 +148,7 @@ export default function MobileNav({
                           exit="closed"
                           className="overflow-hidden"
                         >
-                          <div className="ml-2 mt-1 flex flex-col border-l-2 border-gray-100 pb-4 pl-4">
+                          <div className="ml-2 mt-0.5 flex flex-col border-l-2 border-gray-100 pb-3 pl-3">
                             {link.subLinks?.map((subItem) => {
                               const isSubActive =
                                 pathname === subItem.href;
@@ -158,7 +158,7 @@ export default function MobileNav({
                                   key={subItem.href}
                                   href={subItem.href}
                                   onClick={() => setIsOpen(false)}
-                                  className={`rounded-md px-4 py-3 text-base transition-colors ${
+                                  className={`rounded-md px-3 py-2.5 text-sm transition-colors ${
                                     isSubActive
                                       ? "bg-gray-50 font-semibold text-[#6748FE]"
                                       : "text-gray-600 hover:text-[#6748FE]"

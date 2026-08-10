@@ -1,70 +1,82 @@
+/* eslint-disable @next/next/no-img-element */
+
 "use client";
 
-import { motion } from "framer-motion";
+import React from "react";
+import { Sparkles } from "lucide-react";
 
-// Animations
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
-  },
-};
-
-const stagger = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
-};
-
-export default function AboutHero() {
+export default function AboutUsSection() {
   return (
-    <section className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 relative z-10 mb-20 md:mb-32">
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={stagger}
-        className="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-24"
-      >
-        {/* Left Content */}
-        <motion.div variants={fadeUp} className="max-w-3xl lg:w-1/2">
-          <div className="inline-block px-4 py-1.5 rounded-xl bg-zinc-200/50 border border-zinc-200 text-sm font-semibold text-zinc-600 mb-6">
-            About Us
+    <div className="relative text-slate-100 pt-28 md:pt-36 pb-8 md:pb-12 px-6 sm:px-8 lg:px-12 font-sans selection:bg-[#6748FE] selection:text-white">
+      
+      {/* STATIC LUXURY BACKGROUND GLOWS */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#6748FE]/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-10 right-10 w-[400px] h-[400px] bg-blue-600/20 rounded-full blur-[100px]" />
+      </div>
+
+      {/* MAIN CONTAINER */}
+      <div className="relative z-10 max-w-5xl mx-auto space-y-12">
+        
+        {/* HEADING OUTSIDE THE BOX */}
+        <div className="flex flex-col items-start">
+          {/* Overline Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#6748FE]/10 border border-[#6748FE]/30 text-[#A78BFA] text-xs font-semibold tracking-wider uppercase mb-6 w-fit">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Who we are</span>
           </div>
 
-          <motion.h1
-            variants={fadeUp}
-            // tracking-normal (Mobile-il spacing kuraykkunnu)
-            // lg:tracking-tight (Desktop/Laptop-il original spacing)
-            className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-normal lg:tracking-tight text-black leading-[0.95] mb-8"
-          >
-            Curating the <br className="hidden md:block" />
-            <span className="text-[#A899FF]">future of brands.</span>
-          </motion.h1>
-        </motion.div>
+          {/* Main Heading */}
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1]">
+            How we <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#818cf8] to-[#6748FE]">started</span>
+          </h2>
+        </div>
 
-        {/* Right Content */}
-        <motion.div variants={fadeUp} className="w-full lg:w-1/2 lg:pt-6">
-          <svg
-            className="w-10 h-10 text-[#A899FF] mb-6"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-          </svg>
+        {/* CONTENT BOX */}
+        <div className="group relative bg-[#0b1221]/80 backdrop-blur-xl border border-white/10 p-8 sm:p-12 lg:p-16 rounded-[2.5rem] shadow-2xl shadow-black/40 hover:border-[#818cf8]/50 transition-all duration-500">
+          
+          <div className="absolute -inset-px rounded-[2.5rem] bg-gradient-to-b from-[#818cf8]/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-          <p className="text-xl md:text-2xl text-zinc-600 leading-relaxed">
-            <strong className="text-black font-bold">
-              SeaBrand AI is an AI-powered strategic branding and digital
-              marketing company dedicated to helping businesses, startups,
-              entrepreneurs, and entertainment brands build powerful market
-              identities.
-            </strong>{" "}
-            <br />
-            <br />
-          </p>
-        </motion.div>
-      </motion.div>
-    </section>
+          <div className="relative z-10 flex flex-col items-start">
+            
+            {/* Paragraphs with exact line breaks */}
+            <div className="space-y-6 text-slate-300 leading-relaxed font-normal text-base md:text-lg">
+              <p className="m-0">
+                SEABRAND AI was founded with a simple yet ambitious belief: the future of branding is no longer driven by creativity alone—it is driven by strategy, intelligence, and continuous innovation.
+              </p>
+
+              <p className="m-0">
+                As businesses embrace digital transformation, traditional branding methods are no longer enough to compete in an AI-driven world. Brands need more than attractive designs or marketing campaigns—they need a structured ecosystem that connects strategy, branding, communication, and growth.
+              </p>
+
+              <p className="m-0">
+                That&apos;s why SEABRAND AI was created.
+              </p>
+
+              <p className="m-0">
+                Recognized as Kerala&apos;s First AI Strategic Branding Curator, SEABRAND AI introduces an AI-first strategic branding ecosystem that helps businesses, startups, professionals, and creators build meaningful, scalable, and future-ready brands.
+              </p>
+
+              <div className="pt-2">
+                <p className="m-0 font-medium text-white mb-2">Our methodology is built on three core pillars:</p>
+                <p className="m-0 font-bold text-xl text-[#A78BFA]">AI + Strategy + Curation</p>
+              </div>
+
+              <p className="m-0">
+                By combining strategic thinking with intelligent workflows and creative execution, we help brands position themselves with clarity, build stronger customer connections, and achieve sustainable growth.
+              </p>
+
+              <p className="m-0">
+                At SEABRAND AI, we don&apos;t simply deliver branding services—we build strategic ecosystems designed for long-term business success.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
   );
 }

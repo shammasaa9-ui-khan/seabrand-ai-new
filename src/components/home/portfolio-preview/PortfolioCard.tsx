@@ -4,14 +4,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-interface Project {
-  id: string | number;
-  slug: string;
-  image: string;
-  title: string;
-  categories: string;
-  client: string;
-}
+import { Project } from "@/src/data/projects.data";
 
 interface PortfolioCardProps {
   project: Project;
@@ -64,7 +57,7 @@ export default function PortfolioCard({ project, index }: PortfolioCardProps) {
           {/* Category */}
           <div className="mb-4 flex">
             <div className="px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[10px] sm:text-xs font-medium text-white uppercase tracking-widest">
-              {project.categories}
+              {project.categories[0]}
             </div>
           </div>
 

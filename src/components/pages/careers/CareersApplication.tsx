@@ -62,7 +62,7 @@ export default function CareersApplication({
               </p>
               <div className="w-full pt-6 border-t border-zinc-200">
                 <p className="text-zinc-500 font-medium leading-relaxed">
-                  SeaBrand AI <br />
+                  SEABRAND AI <br />
                   Kerala, India <br />
                   676503
                 </p>
@@ -231,7 +231,7 @@ export default function CareersApplication({
                 </label>
               </div>
 
-              <div className="flex flex-col gap-3">
+              {/* <div className="flex flex-col gap-3">
                 <label className="text-sm font-bold text-zinc-500">
                   Cover Letter / Portfolio
                 </label>
@@ -241,7 +241,7 @@ export default function CareersApplication({
                   className="w-full bg-transparent border-b border-zinc-300 pb-3 text-black focus:outline-none focus:border-[#6748FE] transition-colors resize-none placeholder:text-zinc-400 font-medium"
                   placeholder="Share your link or tell us why you're a fit..."
                 ></textarea>
-              </div>
+              </div> */}
 
               <div className="flex flex-col gap-4 mt-4">
                 {/* Submit Button */}

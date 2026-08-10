@@ -51,7 +51,7 @@ export default function DesktopNav() {
               )}
             </Link>
 
-          {/* Desktop Dropdown Menu (Glass Effect) */}
+          {/* Desktop Dropdown Menu (Solid Background) */}
           {link.subLinks && (
             <AnimatePresence>
               {activeDropdown === link.name && (
@@ -62,13 +62,13 @@ export default function DesktopNav() {
                   transition={{ duration: 0.2, ease: "easeOut" }}
                   className="absolute top-full left-1/2 -translate-x-1/2 pt-6 w-48 z-50"
                 >
-                  <div className="bg-white/70 backdrop-blur-xl rounded-xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] border border-white/40 overflow-hidden flex flex-col p-2">
+                  <div className="bg-white rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden flex flex-col p-2">
                     <ul className="flex flex-col w-full">
                       {link.subLinks.map((subItem) => (
                         <li key={subItem.name} className="w-full">
                           <Link
                             href={subItem.href}
-                            className="group/sub block w-full px-4 py-2.5 text-sm font-medium text-gray-800 hover:bg-white/50 rounded-lg transition-colors"
+                            className="group/sub block w-full px-4 py-2.5 text-sm font-medium text-gray-800 hover:bg-gray-50 rounded-lg transition-colors"
                           >
                             {/* Sub-link Rolling Text */}
                             <div className="relative overflow-hidden inline-flex">

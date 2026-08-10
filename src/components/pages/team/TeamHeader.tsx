@@ -1,4 +1,3 @@
-
 "use client";
 
 import { motion, Variants } from "framer-motion";
@@ -41,28 +40,28 @@ export default function TeamHeader() {
       </motion.div>
 
       <motion.h1
-  variants={fadeUp}
-  className="
-    text-5xl
-    md:text-7xl
-    lg:text-8xl
-    font-bold
-    
-    /* Mobile-il normal-il ninnu kurach space kurakkunnu */
-    tracking-tight
-    
-    /* Desktop-il ninakku vendi irunna spacing (change aavilla) */
-    md:tracking-[0.08em]
-    lg:tracking-tight
-    
-    text-black
-    leading-[0.95]
-    mb-8
-  "
->
-  The minds behind <br className="hidden md:block" />
-  <span className="text-[#A899FF]">the magic.</span>
-</motion.h1>
+        variants={fadeUp}
+        className="
+          text-5xl
+          md:text-7xl
+          lg:text-8xl
+          font-bold
+          
+          /* Responsivil mathram letter spacing kootan (tracking-wide / tracking-wider / tracking-widest) */
+          tracking-wider
+          
+          /* Desktop-il original settings mathram (md:tracking-[0.08em] lg:tracking-tight) */
+          md:tracking-[0.08em]
+          lg:tracking-tight
+          
+          text-black
+          leading-[0.95]
+          mb-8
+        "
+      >
+        The minds behind <br className="hidden md:block" />
+        <span className="text-[#A899FF]">the magic.</span>
+      </motion.h1>
     </motion.div>
   );
 }

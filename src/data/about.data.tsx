@@ -2,24 +2,19 @@
 
 export const aboutData = {
   mission: {
-    title: "Our Mission",
-    text: "To empower businesses, startups, entrepreneurs, and creators with AI-driven branding strategies that transform ideas into influential brands and sustainable growth. We aim to bridge the gap between innovation and market success by combining strategic thinking, creative storytelling, and intelligent technology.",
-    image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop",
-    alt: "Team working together on a mission",
+    title: "What we do every day",
+    text: "To help businesses, startups, professionals, and creators build future-ready brands through an AI-first strategic branding approach that delivers clarity, growth, and long-term value.",
   },
+
   vision: {
-    title: "Our Vision",
-    text: "To become a global leader in AI-powered branding and marketing, helping visionary businesses and individuals create brands that inspire, influence, and shape the future. We envision a world where every ambitious entrepreneur, startup, and organization can access world-class branding powered by artificial intelligence.",
-    image:
-      "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop",
-    alt: "Modern office building representing vision",
+    title: "Where we're going",
+    text: "To make AI Strategic Branding a mainstream business service by transforming how brands are built, positioned, and grown through the SEABRAND AI Ecosystem.",
   },
+
   values: {
-    title: "Our Values",
-    image:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop",
-    alt: "Team collaborating, hands together",
+    title: "The principles that guide us",
+    text: "Strategy defines the direction. Curation shapes the experience. AI accelerates the journey. Together, they create brands built for the future.",
+
     list: [
       {
         name: "Integrity",
@@ -39,38 +34,49 @@ export const aboutData = {
       },
     ],
   },
-  gridImages: [
-    {
-      id: 1,
-      src: "https://img.magnific.com/free-photo/empty-financial-department-office_482257-112016.jpg?semt=ais_hybrid&w=740&q=80",
-      alt: "Company Culture",
-      sizes: "(max-width:768px) 100vw, 40vw",
-      classes:
-        "col-span-2 md:col-span-5 row-span-2 relative min-h-[320px] md:min-h-[520px] rounded-2xl overflow-hidden bg-zinc-200",
-    },
-    {
-      id: 2,
-      src: "https://img.magnific.com/free-photo/empty-financial-department-office_482257-112016.jpg?semt=ais_hybrid&w=740&q=80",
-      alt: "Office Collaboration",
-      sizes: "(max-width:768px) 100vw, 33vw",
-      classes:
-        "col-span-2 md:col-span-4 relative min-h-[220px] md:min-h-[250px] rounded-2xl overflow-hidden bg-zinc-200",
-    },
-    {
-      id: 3,
-      src: "https://img.magnific.com/free-photo/empty-financial-department-office_482257-112016.jpg?semt=ais_hybrid&w=740&q=80",
-      alt: "Strategy Meeting",
-      sizes: "(max-width:768px) 50vw, 25vw",
-      classes:
-        "col-span-1 md:col-span-3 relative min-h-[220px] md:min-h-[250px] rounded-2xl overflow-hidden bg-zinc-200",
-    },
-    {
-      id: 4,
-      src: "https://img.magnific.com/free-photo/empty-financial-department-office_482257-112016.jpg?semt=ais_hybrid&w=740&q=80",
-      alt: "Team Brainstorming",
-      sizes: "(max-width:768px) 50vw, 60vw",
-      classes:
-        "col-span-1 md:col-span-7 relative min-h-[220px] md:min-h-[250px] rounded-2xl overflow-hidden bg-zinc-200",
-    },
-  ],
+
+  whyChoose: {
+    title: "Why Choose",
+    highlight: "SEABRAND AI",
+    subtitle: "Build a Brand That Leads, Not Just Competes",
+
+    intro: [
+      "At SEABRAND AI, we believe successful brands are built through strategy, not guesswork. Our AI-first strategic branding approach combines business insight, creative thinking, and structured execution to help brands grow with clarity and confidence.",
+
+      "Whether you're an established business, a startup, a professional, or a creator, we develop tailored branding strategies that strengthen your identity, improve market positioning, and support long-term growth.",
+    ],
+
+    features: [
+      {
+        title: "AI-First Strategic Approach",
+        description:
+          "We integrate AI into our strategic workflow to improve research, planning, content development, branding, and marketing—helping brands move faster while maintaining quality and consistency.",
+      },
+      {
+        title: "Complete Branding Ecosystem",
+        description:
+          "From brand strategy and visual identity to content creation, marketing, and business growth, everything is connected through one structured ecosystem that keeps your brand aligned at every stage.",
+      },
+      {
+        title: "Tailored Brand Solutions",
+        description:
+          "Every business is different. We create customized branding strategies based on your goals, industry, audience, and growth vision instead of using one-size-fits-all solutions.",
+      },
+      {
+        title: "Strategy Before Creativity",
+        description:
+          "Great design starts with a great strategy. Every creative decision is guided by clear business objectives, ensuring your brand looks professional and performs effectively.",
+      },
+      {
+        title: "Scalable Growth Framework",
+        description:
+          "Our approach is designed not only to launch brands but also to help them evolve, adapt, and grow as markets and customer expectations change.",
+      },
+      {
+        title: "Long-Term Partnership",
+        description:
+          "We believe branding is an ongoing journey. As your business grows, we continue refining your strategy, communication, and marketing to keep your brand relevant and competitive.",
+      },
+    ],
+  },
 };

@@ -34,5 +34,5 @@ export const items = [
     content: "curator@seabrand.in",
     href: "mailto:curator@seabrand.in",
   },
-  { icon: MapPin, title: "Visit us", content: "SeaBrand AI, Kerala, India" },
+  { icon: MapPin, title: "Visit us", content: "SEABRAND AI, Kerala, India" },
 ];

@@ -1,4 +1,8 @@
+import IndustriesWeServe from "../components/home/BUILD-BRAND/industriesWeServe";
 import ExpertiseSection from "../components/home/expertise/ExpertiseSection";
+import FAQ from "../components/home/FAQ/FAQ";
+// import FAQ from "../components/home/FAQ/FAQ";
+// import FAQPage from "../components/home/FAQ/FAQ";
 import FocusSection from "../components/home/focus/FocusSection";
 import Hero from "../components/home/hero/Hero";
 import PortfolioSection from "../components/home/portfolio-preview/PortfolioSection";
@@ -16,6 +20,11 @@ export default function Home() {
       <PortfolioSection />
       <TestimonialsSection />
       <StrategicRevolution />
+      <FAQ/>
+      <IndustriesWeServe/>
+      
+      
+    
     </div>
   );
 }

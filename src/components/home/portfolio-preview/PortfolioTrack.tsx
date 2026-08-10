@@ -17,7 +17,7 @@ export default function PortfolioTrack({ x }: PortfolioTrackProps) {
     <motion.div style={{ x }} className="flex gap-6 px-4 md:px-12 w-max">
       {/* Mapped Project Cards */}
       {displayedProjects.map((project, index) => (
-        <PortfolioCard key={project.id} project={project as any} index={index} />
+        <PortfolioCard key={project.id} project={project} index={index} />
       ))}
 
       {/* The Final "View All Projects" Slide */}
