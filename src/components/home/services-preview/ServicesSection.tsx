@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { servicesData } from "@/src/data/services.data";
 import ServicesTitle from "./ServicesTitle";
 import ServicesDisplay from "./ServicesDisplay";
-import LuxuryMarbleBackground from "@/src/components/shared/LuxuryMarbleBackground";
+
 // import ServiceBackground from "./servicebackground";
 
 export default function ServicesSection() {
@@ -24,7 +24,7 @@ export default function ServicesSection() {
 
   return (
     <section className="relative py-24 md:py-32 overflow-hidden w-full text-white bg-gradient-to-br from-[#020617] via-[#071A3D] to-[#020617]">
-      <LuxuryMarbleBackground />
+      {/* <LuxuryMarbleBackground /> */}
       
       {/* ✅ FIXED: Applied the Universal Container classes here */}
       <div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 relative z-10">

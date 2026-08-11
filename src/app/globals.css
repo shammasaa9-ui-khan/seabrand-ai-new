@@ -5,6 +5,7 @@
     format("truetype");
   font-display: swap;
 }
+
 @font-face {
   font-family: "BAHAMAS_LIGHT";
   src: url("/fonts/bahamas.woff") format("woff");
@@ -34,8 +35,17 @@
     @apply font-bahamas-light;
   }
 
-  /* Headings stay untouched (or you can explicitly force them to use your default/heading fonts) */
+  /* Headings use the Bahamas font */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bahamas; /* Change this to font-bahamas-heavy if you prefer */
+    @apply font-bahamas;
   }
+
+  /* Responsive Letter Spacing (Desktop view മാറ്റമില്ലാതെ തന്നെ, mobile/tablet സ്ക്രീനുകളിൽ മാത്രം spacing കൂടും) */
+  @media (max-width: 768px) {
+    h1, h2, h3, h4, h5, h6 {
+      letter-spacing: 0.2em;
+    }
+  }
+
+  
 }

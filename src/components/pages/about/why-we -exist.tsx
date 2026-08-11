@@ -7,7 +7,7 @@ import { Sparkles } from "lucide-react";
 
 export default function WhyWeExist() {
   return (
-    <div className="relative text-slate-100 pt-8 md:pt-12 pb-8 md:pb-12 px-6 sm:px-8 lg:px-12 font-sans selection:bg-[#6748FE] selection:text-white">
+    <div className="relative bg-transparent text-slate-100 pt-8 md:pt-12 pb-8 md:pb-12 px-6 sm:px-8 lg:px-12 font-sans selection:bg-[#6748FE] selection:text-white">
       
       {/* STATIC LUXURY BACKGROUND GLOWS */}
       <div className="absolute inset-0 z-0 pointer-events-none">

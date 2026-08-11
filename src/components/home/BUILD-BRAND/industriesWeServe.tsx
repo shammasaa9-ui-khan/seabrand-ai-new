@@ -1,45 +1,58 @@
 /* eslint-disable @next/next/no-img-element */
 
-'use client';
+"use client";
 
-import { industriesWeServeData } from "@/src/data/industriesWeServe.data";
 import React from "react";
+import { industriesWeServeData } from "@/src/data/industriesWeServe.data";
 
 export default function IndustriesWeServe() {
   return (
-    <section className="tech-background relative py-20 px-6 sm:px-8 lg:px-12 text-slate-100 font-sans overflow-hidden">
-      
+    <section className="relative py-6 md:py-20 overflow-hidden bg-[#01030d] text-[#e0e0e0]">
       {/* Background subtle glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-indigo-950/40 blur-[120px] rounded-full pointer-events-none z-0" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-indigo-950/45 blur-[120px] rounded-full pointer-events-none z-0" />
 
-      <div className="relative z-10 max-w-6xl mx-auto">
-        
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-white">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-3 md:mb-6 text-white tracking-[0.08em] md:tracking-normal">
           {industriesWeServeData.heading}
         </h2>
 
         {/* Description */}
-        <p className="text-slate-300 text-center max-w-3xl mx-auto mb-12 text-base md:text-lg leading-relaxed font-light">
+        <p className="text-slate-300 text-center max-w-3xl mx-auto mb-4 md:mb-12 text-base md:text-lg leading-relaxed font-light">
           {industriesWeServeData.description}
         </p>
 
-        {/* Outer Box Container with pure black background */}
-        <div className="bg-black rounded-2xl md:rounded-3xl p-6 md:p-10 relative overflow-hidden border border-gray-800/60">
-          <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] via-transparent to-transparent opacity-100 pointer-events-none" />
-          
+        {/* Outer Box Container */}
+        <div className="bg-black rounded-2xl md:rounded-3xl p-4 sm:p-6 md:p-10 relative overflow-hidden border border-gray-800/60 shadow-xl">
+          <div className="absolute inset-0 bg-gradient-to-b from-white/[0.02] via-transparent to-transparent pointer-events-none" />
+
           <div className="relative z-10">
             {/* Subheading */}
-            <h3 className="text-xl md:text-2xl font-semibold mb-8 text-indigo-400">
+            <h3 className="text-xl md:text-2xl font-semibold mb-3 md:mb-8 text-indigo-400">
               {industriesWeServeData.subheading}
             </h3>
 
-            {/* 3-Column Grid Layout with Clean Structure */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-8">
+            {/* 3 Column Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-2 md:gap-y-4 gap-x-8">
               {industriesWeServeData.items.map((item, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  {/* Trigon (triangle) Icon */}
-                  <span className="text-indigo-400 text-xs shrink-0">▲</span>
+                <div key={index} className="flex items-center gap-3">
+                  
+                  {/* Smaller Outlined Triangle Icon */}
+                  <svg
+                    className="shrink-0 w-2.5 h-3 text-indigo-400"
+                    viewBox="0 0 14 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 1L13 8L1 15V1Z"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+
+                  {/* Industry Name */}
                   <span className="text-slate-200 font-medium text-sm md:text-base">
                     {item.name}
                   </span>
@@ -47,49 +60,8 @@ export default function IndustriesWeServe() {
               ))}
             </div>
           </div>
-
         </div>
-
       </div>
-
-      {/* CSS Styles for Background */}
-      <style jsx global>{`
-        body, html {
-          margin: 0;
-          padding: 0;
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          background-color: #01030d;
-          color: #e0e0e0;
-        }
-
-        .tech-background {
-          background-color: #01030d;
-          background-image: 
-            radial-gradient(circle at 75% 20%, rgba(0, 130, 255, 0.4) 0%, transparent 50%),
-            radial-gradient(circle at 20% 80%, rgba(0, 90, 220, 0.35) 0%, transparent 55%),
-            radial-gradient(circle at 50% 50%, rgba(1, 3, 13, 0.85) 0%, #01030d 100%);
-          background-attachment: fixed;
-          position: relative;
-          overflow-x: hidden;
-        }
-
-        .tech-background::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(
-            180deg, 
-            rgba(1, 3, 13, 0.6) 0%, 
-            rgba(1, 3, 13, 0.35) 50%, 
-            rgba(1, 3, 13, 0.75) 100%
-          );
-          pointer-events: none;
-          z-index: 0;
-        }
-      `}</style>
     </section>
   );
 }

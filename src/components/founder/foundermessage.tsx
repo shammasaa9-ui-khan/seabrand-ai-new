@@ -19,18 +19,18 @@ export default function FoundersJourney() {
       <div className="pointer-events-none absolute -left-40 top-40 h-[600px] w-[600px] rounded-full bg-[#D8C1A3]/15 blur-[150px]" />
       <div className="pointer-events-none absolute -right-40 bottom-20 h-[600px] w-[600px] rounded-full bg-[#C69A5B]/15 blur-[150px]" />
 
-      <div className="relative mx-auto max-w-[1200px]">
+      <div className="relative mx-auto max-w-[900px]">
 
         {/* Section Header */}
-        <div className="mx-auto max-w-3xl text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-[#EEE7DE] px-4 py-2 text-sm font-medium tracking-wide text-[#1B1B1B]">
+        <div className="mx-auto max-w-3xl text-center mb-12 sm:mb-16">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-[#EEE7DE] border border-[#DED5C9] px-4 py-2 text-sm font-medium tracking-wide text-[#1B1B1B]">
             <Compass size={16} strokeWidth={2} />
             <span>THE FOUNDER&apos;S JOURNEY</span>
           </div>
 
-          <h1 className="text-4xl font-black tracking-tight text-[#101820] sm:text-5xl md:text-6xl">
-            Every Brand Has a Story. <br />
-            <span className="text-[#A47738]">This Is Mine.</span>
+          <h1 className="text-4xl font-black tracking-tight text-[#101820] sm:text-5xl md:text-6xl sm:tracking-normal lg:tracking-tight">
+            <span className="tracking-[0.03em] sm:tracking-normal">Every Brand Has a Story.</span> <br />
+            <span className="text-[#A47738] tracking-[0.03em] sm:tracking-normal">This Is Mine.</span>
           </h1>
 
           <p className="mt-4 text-lg text-[#555555]">
@@ -39,17 +39,15 @@ export default function FoundersJourney() {
         </div>
 
         {/* Main Content Flow */}
-        <div className="mt-8 sm:mt-12 space-y-6 md:space-y-8 text-[#181818]">
+        <div className="mt-8 sm:mt-12 space-y-12 md:space-y-16 text-[#181818]">
 
           {/* Chapter 1: The Turning Point */}
-          <div className="grid gap-6 md:gap-8 md:grid-cols-12 md:items-start py-2 md:py-3">
-            <div className="md:col-span-4 flex justify-start md:justify-end mt-1">
-              <div className="inline-flex items-center gap-3 rounded-2xl bg-[#EEE7DE] px-4 py-3 text-[#A47738] whitespace-nowrap">
-                <Lightbulb size={28} strokeWidth={1.8} />
-                <span className="font-bold uppercase tracking-wider text-sm text-[#111820]">2020: The Pivot</span>
-              </div>
+          <div className="flex flex-col items-start space-y-4">
+            <div className="inline-flex items-center gap-3 rounded-2xl bg-[#EEE7DE] border border-[#DED5C9] px-4 py-3 text-[#A47738]">
+              <Lightbulb size={24} strokeWidth={1.8} />
+              <span className="font-bold uppercase tracking-wider text-sm text-[#111820]">2020: The Pivot</span>
             </div>
-            <div className="md:col-span-8 space-y-3 text-base leading-[1.7] sm:text-lg text-[#333333]">
+            <div className="space-y-3 text-base leading-[1.7] sm:text-lg text-[#333333] w-full">
               <p>
                 In 2020, during the global COVID-19 pandemic, I was working as a Software Developer at an e-commerce company in HiLite Business Park, Kozhikode. Like many professionals during that time, remote work gave me an opportunity to pause and reflect on a simple but life-changing question:
               </p>
@@ -63,14 +61,12 @@ export default function FoundersJourney() {
           </div>
 
           {/* Chapter 2: The Beginning & Realization */}
-          <div className="grid gap-6 md:gap-8 md:grid-cols-12 md:items-start py-2 md:py-3">
-            <div className="md:col-span-4 flex justify-start md:justify-end mt-1">
-              <div className="inline-flex items-center gap-3 rounded-2xl bg-[#EEE7DE] px-4 py-3 text-[#A47738] whitespace-nowrap">
-                <TrendingUp size={28} strokeWidth={1.8} />
-                <span className="font-bold uppercase tracking-wider text-sm text-[#111820]">PROCODER Era</span>
-              </div>
+          <div className="flex flex-col items-start space-y-4">
+            <div className="inline-flex items-center gap-3 rounded-2xl bg-[#EEE7DE] border border-[#DED5C9] px-4 py-3 text-[#A47738]">
+              <TrendingUp size={24} strokeWidth={1.8} />
+              <span className="font-bold uppercase tracking-wider text-sm text-[#111820]">PROCODER Era</span>
             </div>
-            <div className="md:col-span-8 space-y-3 text-base leading-[1.7] sm:text-lg text-[#333333]">
+            <div className="space-y-3 text-base leading-[1.7] sm:text-lg text-[#333333] w-full">
               <p>
                 My first venture was <strong>PROCODER – Technology & Admedia</strong>. Like many first-time founders, I believed that offering more services meant creating more opportunities—websites, software development, branding, digital marketing, business consulting, IT solutions, and creative services.
               </p>
@@ -84,14 +80,12 @@ export default function FoundersJourney() {
           </div>
 
           {/* Chapter 3: UAE Experience & The Difficult Chapter */}
-          <div className="grid gap-6 md:gap-8 md:grid-cols-12 md:items-start py-2 md:py-3">
-            <div className="md:col-span-4 flex justify-start md:justify-end mt-1">
-              <div className="inline-flex items-center gap-3 rounded-2xl bg-[#EEE7DE] px-4 py-3 text-[#A47738] whitespace-nowrap">
-                <ShieldCheck size={28} strokeWidth={1.8} />
-                <span className="font-bold uppercase tracking-wider text-sm text-[#111820]">Resilience & Clarity</span>
-              </div>
+          <div className="flex flex-col items-start space-y-4">
+            <div className="inline-flex items-center gap-3 rounded-2xl bg-[#EEE7DE] border border-[#DED5C9] px-4 py-3 text-[#A47738]">
+              <ShieldCheck size={24} strokeWidth={1.8} />
+              <span className="font-bold uppercase tracking-wider text-sm text-[#111820]">Resilience & Clarity</span>
             </div>
-            <div className="md:col-span-8 space-y-3 text-base leading-[1.7] sm:text-lg text-[#333333]">
+            <div className="space-y-3 text-base leading-[1.7] sm:text-lg text-[#333333] w-full">
               <p>
                 In 2023, I travelled to the UAE to explore new career and business opportunities. Eventually, I realized something vital: instead of helping build someone else&apos;s vision, I wanted to continue building my own, bringing me back to India with renewed clarity.
               </p>
@@ -105,14 +99,12 @@ export default function FoundersJourney() {
           </div>
 
           {/* Chapter 4: The Birth of SEABRAND AI */}
-          <div className="grid gap-6 md:gap-8 md:grid-cols-12 md:items-start py-2 md:py-3">
-            <div className="md:col-span-4 flex justify-start md:justify-end mt-1">
-              <div className="inline-flex items-center gap-3 rounded-2xl bg-[#EEE7DE] px-4 py-3 text-[#A47738] whitespace-nowrap">
-                <Cpu size={28} strokeWidth={1.8} />
-                <span className="font-bold uppercase tracking-wider text-sm text-[#111820]">SEABRAND AI</span>
-              </div>
+          <div className="flex flex-col items-start space-y-4">
+            <div className="inline-flex items-center gap-3 rounded-2xl bg-[#EEE7DE] border border-[#DED5C9] px-4 py-3 text-[#A47738]">
+              <Cpu size={24} strokeWidth={1.8} />
+              <span className="font-bold uppercase tracking-wider text-sm text-[#111820]">SEABRAND AI</span>
             </div>
-            <div className="md:col-span-8 space-y-3 text-base leading-[1.7] sm:text-lg text-[#333333]">
+            <div className="space-y-3 text-base leading-[1.7] sm:text-lg text-[#333333] w-full">
               <p>
                 The answer to my deep research became <span className="font-semibold text-[#A47738]">SEABRAND AI</span>—not another digital marketing agency or AI software company, but an entirely new approach to branding combining strategic thinking, human expertise, and Artificial Intelligence into one integrated ecosystem.
               </p>
@@ -128,9 +120,9 @@ export default function FoundersJourney() {
         </div>
 
         {/* Professional Highlights Grid */}
-        <div className="mt-14 md:mt-18">
+        <div className="mt-14 md:mt-20">
           <div className="text-center mb-8 md:mb-10">
-            <h2 className="text-3xl font-bold tracking-tight text-[#101820] mt-3">Professional Highlights</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-[#101820] mt-3 tracking-[0.03em] sm:tracking-tight">Professional Highlights</h2>
           </div>
 
           <div className="grid gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -148,15 +140,15 @@ export default function FoundersJourney() {
         </div>
 
         {/* Founder's Message Quote Box */}
-        <div className="mt-14 md:mt-18 overflow-hidden rounded-3xl border border-[#DED5C9] bg-[#EEE5DB] p-6 md:p-8 lg:p-12 relative shadow-lg">
+        <div className="mt-14 md:mt-20 overflow-hidden rounded-3xl border border-[#DED5C9] bg-[#EEE5DB] p-6 md:p-8 lg:p-12 relative shadow-lg">
           {/* Quote icon position adjusted for responsiveness */}
           <div className="absolute right-4 top-4 md:right-6 md:top-6 text-[#A47738]/15 md:text-[#A47738]/20 pointer-events-none scale-75 md:scale-100 origin-top-right">
             <Quote size={120} />
           </div>
           <div className="relative z-10 max-w-3xl">
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#A47738] mb-3">Founder&apos;s Message</p>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-[#101820] mb-4">
-              Fasalu Rahman KP
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-[#101820] mb-4 tracking-[0.05em] sm:tracking-tight">
+              Fazal
             </h3>
             <blockquote className="text-lg md:text-xl font-medium leading-relaxed text-[#111820] sm:text-2xl italic">
               &ldquo;I believe every business deserves a strategy before marketing. When strategy leads, branding becomes meaningful, marketing becomes purposeful, and growth becomes sustainable.&rdquo;

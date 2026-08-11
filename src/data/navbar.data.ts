@@ -5,7 +5,7 @@ export const navLinks = [
     href: "#",
     subLinks: [
       { name: "SEABRANDAI About", href: "/about" },
-      { name: "Founder section", href: "/founder-message" },
+      { name: "Founder Section", href: "/founder-message" },
     ],
   },
   {

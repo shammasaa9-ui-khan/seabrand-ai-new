@@ -2,7 +2,6 @@
 
 import { motion, Variants } from "framer-motion";
 
-// Adding the 'Variants' type explicitly fixes the TypeScript error
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
@@ -42,20 +41,18 @@ export default function TeamHeader() {
       <motion.h1
         variants={fadeUp}
         className="
-          text-5xl
-          md:text-7xl
-          lg:text-8xl
+          /* Heading size kurakkaan ivide change cheythu (e.g., text-3xl md:text-5xl lg:text-6xl) */
+          text-3xl
+          md:text-5xl
+          lg:text-6xl
           font-bold
           
-          /* Responsivil mathram letter spacing kootan (tracking-wide / tracking-wider / tracking-widest) */
           tracking-wider
-          
-          /* Desktop-il original settings mathram (md:tracking-[0.08em] lg:tracking-tight) */
           md:tracking-[0.08em]
           lg:tracking-tight
           
           text-black
-          leading-[0.95]
+          leading-[1.1]
           mb-8
         "
       >

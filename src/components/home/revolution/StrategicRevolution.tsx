@@ -1,5 +1,5 @@
 
-import LuxuryMarbleBackground from "@/src/components/shared/LuxuryMarbleBackground";
+
 import RevolutionBackground from "./RevolutionBackground";
 import RevolutionHeader from "./RevolutionHeader";
 import RevolutionStatsGrid from "./RevolutionStatsGrid";
@@ -11,7 +11,7 @@ export default function StrategicRevolution() {
       className="pt-16 pb-12 md:py-20 relative overflow-hidden w-full bg-gradient-to-br from-[#020617] via-[#071A3D] to-[#020617]"
       id="impact"
     >
-      <LuxuryMarbleBackground scoped />
+      {/* <LuxuryMarbleBackground scoped /> */}
       <RevolutionBackground />
 
       {/* Universal Container applied */}

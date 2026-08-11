@@ -14,16 +14,9 @@ export default function ServiceCTA({ onOpenModal }: ServiceCTAProps) {
           backdropFilter: "blur(24px)",
           WebkitBackdropFilter: "blur(24px)",
           border: "1px solid rgba(103,72,254,0.30)",
-          boxShadow: "0 0 60px rgba(103,72,254,0.30), 0 30px 80px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.10)",
+          boxShadow: "0 30px 80px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.10)",
         }}
       >
-
-        {/* Purple ambient glow behind card */}
-        <div
-          className="absolute -inset-px rounded-[1.8rem] md:rounded-[2.5rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-          style={{ boxShadow: "0 0 80px rgba(103,72,254,0.55)" }}
-        />
-
         <div className="relative z-10 max-w-2xl text-center md:text-left">
           {/* Label Tag */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-xl bg-white/[0.04] border border-white/10 text-xs md:text-sm font-semibold text-[#6748FE] mb-6 md:mb-8 uppercase tracking-widest shadow-sm">

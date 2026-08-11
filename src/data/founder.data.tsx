@@ -62,7 +62,7 @@ export const founderData = {
     badge: "The Founder's Journey",
     title: "Every Brand Has a Story. This Is Mine.",
     "image": {
-      "url": "/images/team/fazal.png", // Path or URL to uploaded founder image
+      "url": "/images/team/fazal1.png", // Path or URL to uploaded founder image
       "alt": "FAZAL - Founder & AI Strategic Brand Curator",
       "uploadPrompt": "Upload/Select Founder Portrait (Recommended ratio 4:5)"
     }
