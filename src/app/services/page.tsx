@@ -56,7 +56,7 @@ export default function ServicesPage() {
   };
 
   return (
-    <main className="relative min-h-screen overflow-x-hidden bg-[#02040a] text-slate-100 pt-0 pb-24 selection:bg-[#6748FE] selection:text-white w-full">
+    <main className="relative min-h-screen overflow-x-hidden bg-[#02040a] text-slate-100 pt-0 pb-0 selection:bg-[#6748FE] selection:text-white w-full">
       
       <BlueBackground />
       

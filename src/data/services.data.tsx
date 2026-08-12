@@ -24,7 +24,7 @@ export const servicesData = {
       dynamicTitle: "Business Branding.",
       rightTitle: "BUSINESS BRANDING",
       rightDesc:
-        "Build a strong, market-leading brand with AI-driven strategy, identity, and positioning.",
+        "Transform existing businesses into scalable, AI-driven brands through strategy, identity, content, marketing, and growth systems.",
 
       // Services Page Card Content
       title: "AI Strategic Business Branding",
