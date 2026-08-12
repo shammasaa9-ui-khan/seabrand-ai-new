@@ -95,7 +95,9 @@
 //       </div>
 //     </section>
 //   );
-// }/* eslint-disable @next/next/no-img-element */
+// }
+
+/* eslint-disable @next/next/no-img-element */
 
 'use client';
 
@@ -116,9 +118,8 @@ export default function FAQ() {
           <span className="text-xs uppercase tracking-widest text-neutral-500 font-semibold mb-2 block">
             010 • FAQS
           </span>
-          {/* "Frequently Asked Questions" heading-ൽ മാത്രം 'Bahamas' font നൽകി */}
-          <h2 className="text-3xl md:text-4xl tracking-tight text-neutral-900" style={{ fontFamily: 'Bahamas, sans-serif' }}>
-            Frequently Asked Questions
+          <h2 className="text-3xl md:text-4xl font-medium tracking-tight text-neutral-900">
+              Frequently Asked Questions
           </h2>
         </div>
 
@@ -137,10 +138,10 @@ export default function FAQ() {
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
-                    <span className="text-sm font-medium text-neutral-400 w-5">
+                    <span className="text-sm font-normal text-neutral-400 w-5">
                       {item.id}
                     </span>
-                    <h3 className="text-base md:text-lg font-medium text-neutral-900">
+                    <h3 className="text-base md:text-lg font-normal text-neutral-900">
                       {item.question}
                     </h3>
                   </div>

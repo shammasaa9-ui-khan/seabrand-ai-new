@@ -36,13 +36,13 @@
   }
 
   /* Headings use the Bahamas font */
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h4, h5, h6 {
     @apply font-bahamas;
   }
 
   /* Responsive Letter Spacing (Desktop view മാറ്റമില്ലാതെ തന്നെ, mobile/tablet സ്ക്രീനുകളിൽ മാത്രം spacing കൂടും) */
   @media (max-width: 768px) {
-    h1, h2, h3, h4, h5, h6 {
+    h1, h2, h4, h5, h6 {
       letter-spacing: 0.2em;
     }
   }
