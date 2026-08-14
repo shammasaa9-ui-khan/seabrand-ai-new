@@ -1,4 +1,3 @@
-import { img } from "framer-motion/client";
 
 export const team = [
   {
@@ -9,14 +8,14 @@ export const team = [
       "Proud to shape the future of branding and digital experiences here at SeaBrand. We build with purpose and execute with precision.",
   },
   {
-    name: "Fasalu Rahman KP",
+    name: "Sammas khan",
     role: "CEO & Founder",
     image:"/images/team/fasalrahman.jpg",
     quote:
       "Proud to shape the future of branding and digital experiences here at SeaBrand. We build with purpose and execute with precision.",
   },
   {
-    name: "Fasalu Rahman KP",
+    name: "Safuwan",
     role: "CEO & Founder",
     image:"/images/team/fasalrahman.jpg",
     quote:

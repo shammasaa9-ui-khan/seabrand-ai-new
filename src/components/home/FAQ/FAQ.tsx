@@ -141,9 +141,9 @@ export default function FAQ() {
                     <span className="text-sm font-normal text-neutral-400 w-5">
                       {item.id}
                     </span>
-                    <h3 className="text-base md:text-lg font-normal text-neutral-900">
+                    <p className="text-base md:text-lg font-bold text-neutral-900">
                       {item.question}
-                    </h3>
+                    </p>
                   </div>
                   
                   {/* Plus & Minus Button */}

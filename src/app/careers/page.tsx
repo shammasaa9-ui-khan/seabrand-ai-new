@@ -12,7 +12,7 @@ export default function CareersPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [expandedJobId, setExpandedJobId] = useState<string | null>(null);
   const [selectedFormJob, setSelectedFormJob] = useState<string>("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitting] = useState(false);
 
   const filteredJobs = useMemo(() => {
     return jobs.filter((job) => {
@@ -29,22 +29,6 @@ export default function CareersPage() {
   };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
-
-      // 1. Clear all native text inputs and the file input
-      e.currentTarget.reset();
-
-      // 2. Clear the custom React states
-      setFileName(null);
-      setSelectedFormJob("");
-
-      // 3. Show the success message
-      setIsSubmitted(true);
-
-      // 4. Hide the success message after 5 seconds
-      setTimeout(() => setIsSubmitted(false), 5000);
-    };
   };
 
   const handleApplyClick = (e: React.MouseEvent, jobId: string) => {

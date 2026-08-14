@@ -56,7 +56,7 @@ export const jobs = [
   },
   {
     id: "hr executive",
-    title: "HR Exicutive",
+    title: "HR Executive",
     type: "Full Time",
     location: "Kozhikode / On-site",
     department: "Engineering",

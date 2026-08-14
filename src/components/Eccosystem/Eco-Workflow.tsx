@@ -1,4 +1,4 @@
-// /* eslint-disable @next/next/no-img-element */
+
 
 // "use client";
 
@@ -101,7 +101,7 @@
 //           {/* LEFT SIDE */}
 //           <div className="lg:col-span-5 lg:sticky lg:top-28 flex flex-col">
 //             <div className="mb-4">
-//               <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2">
+//               <h2 className="text-2xl sm:text-3xl font-extrabold tracking-[0.08em] sm:tracking-[0.06em] lg:tracking-tight mb-2">
 //                 Our <span className="text-blue-600">Workflow</span>
 //               </h2>
 
@@ -157,7 +157,7 @@
 //                           STEP 0{step.number}
 //                         </span>
 
-//                         <h3 className="text-lg sm:text-xl font-black text-slate-900 mt-0.5">
+//                         <h3 className="text-lg sm:text-xl font-black text-slate-900 mt-0.5 tracking-[-0.03em] sm:tracking-[-0.01em] lg:tracking-normal">
 //                           {step.title}
 //                         </h3>
 //                       </div>
@@ -201,9 +201,6 @@
 //     </section>
 //   );
 // }
-
-
-/* eslint-disable @next/next/no-img-element */
 
 "use client";
 
@@ -307,7 +304,7 @@ export default function EcosystemWorkflowSplitDivs() {
           <div className="lg:col-span-5 lg:sticky lg:top-28 flex flex-col">
             <div className="mb-4">
               <h2 className="text-2xl sm:text-3xl font-extrabold tracking-[0.08em] sm:tracking-[0.06em] lg:tracking-tight mb-2">
-                Our <span className="text-blue-600">Workflow</span>
+                Our <span className="text-[#6748FE]">Workflow</span>
               </h2>
 
               <p className="text-slate-900 font-bold text-sm sm:text-base leading-relaxed">
