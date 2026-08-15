@@ -78,6 +78,7 @@ import TestimonialsSection from "@/src/components/home/testimonials/Testimonials
 import StrategicRevolution from "@/src/components/home/revolution/StrategicRevolution";
 import FAQ from "@/src/components/home/FAQ/FAQ";
 import IndustriesWeServe from "@/src/components/home/BUILD-BRAND/industriesWeServe";
+import StrategicRevolution1 from "../components/Revolution1/StrategicRevolution";
 
 const SITE_URL = "https://seabrand.in";
 
@@ -353,9 +354,12 @@ export default function Home() {
       <ExpertiseSection />
       <PortfolioSection />
       <TestimonialsSection />
-      <StrategicRevolution />
+      {/* <StrategicRevolution /> */}
+       <StrategicRevolution1/>
       <FAQ />
       <IndustriesWeServe />
+      {/* <Revolution1/> */}
+     
     </main>
   );
 }
