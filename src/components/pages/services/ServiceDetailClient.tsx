@@ -148,7 +148,7 @@ export default function ServiceDetailClient({
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 md:pt-44 pb-20">
         
         {/* HEADER SECTION */}
-        <div className="flex flex-col items-center text-center mb-6 md:mb-14">
+        <div className="flex flex-col items-center text-center mb-6 md:mb-0">
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-wider md:tracking-normal mb-6 max-w-4xl leading-tight">
             {hasAiStrategic && (
               <span className="block text-[#6748FE] mb-2">

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, ChangeEvent, FormEvent, useMemo } from "react";
+import { useState, ChangeEvent, useMemo } from "react";
 import { jobs } from "@/src/data/careers.data";
 import CareersHeader from "@/src/components/pages/careers/CareersHeader";
 import CareersJobList from "@/src/components/pages/careers/CareersJobList";
@@ -9,7 +9,7 @@ import CareersApplication from "@/src/components/pages/careers/CareersApplicatio
 export default function CareersPage() {
   const [activeFilter, setActiveFilter] = useState("All");
   const [fileName, setFileName] = useState<string | null>(null);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitted] = useState(false);
   const [expandedJobId, setExpandedJobId] = useState<string | null>(null);
   const [selectedFormJob, setSelectedFormJob] = useState<string>("");
   const [isSubmitting] = useState(false);
@@ -28,7 +28,7 @@ export default function CareersPage() {
       setFileName(e.target.files[0].name);
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = () => {
   };
 
   const handleApplyClick = (e: React.MouseEvent, jobId: string) => {

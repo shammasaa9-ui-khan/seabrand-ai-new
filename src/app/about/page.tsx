@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     title: "About SEABRAND AI | AI Strategic Branding Agency",
     description:
       "Discover the vision, mission, philosophy, and AI-first strategic branding approach behind SEABRAND AI.",
-    images: ["https://seabrand.in/images/about-og-image.jpg"],
+    
   },
 
   alternates: {
