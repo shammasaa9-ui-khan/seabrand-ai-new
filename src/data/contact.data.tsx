@@ -1,4 +1,4 @@
-import { Phone, MessageCircle, MapPin } from "lucide-react";
+import { Phone, MessageCircle } from "lucide-react";
 
 export const XIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -34,5 +34,4 @@ export const items = [
     content: "curator@seabrand.in",
     href: "mailto:curator@seabrand.in",
   },
-  { icon: MapPin, title: "Visit us", content: "SEABRAND AI, Kerala, India" },
 ];
