@@ -29,3 +29,4 @@ export const team = [
       "Proud to shape the future of branding and digital experiences here at SeaBrand. We build with purpose and execute with precision.",
   },
 ];
+

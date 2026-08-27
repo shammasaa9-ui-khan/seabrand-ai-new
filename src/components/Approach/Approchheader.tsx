@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+
 
 "use client";
 
@@ -9,9 +9,7 @@ export default function ApproachHeader() {
   return (
     <section className="relative overflow-hidden text-slate-100 pt-28 md:pt-36 pb-8 md:pb-12 px-6 sm:px-8 lg:px-12 font-sans selection:bg-[#6748FE] selection:text-white">
 
-      {/* =====================================================
-          SOLID BLUE + BLACK GRADIENT BACKGROUND (NO LINES)
-      ===================================================== */}
+    
       <div
         className="absolute inset-0 pointer-events-none -z-10"
         style={{
@@ -26,9 +24,6 @@ export default function ApproachHeader() {
         }}
       />
 
-      {/* =====================================================
-          SOFT CENTER BLUE GLOW
-      ===================================================== */}
       <div
         className="absolute inset-0 pointer-events-none -z-10"
         style={{
@@ -43,14 +38,10 @@ export default function ApproachHeader() {
         }}
       />
 
-      {/* =====================================================
-          MAIN CONTENT (bg-luxury image removed completely)
-      ===================================================== */}
+    
       <div className="relative z-10 max-w-4xl mx-auto space-y-12">
 
-        {/* ===================================================
-            HEADER SECTION
-        ==================================================== */}
+       
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,9 +66,7 @@ export default function ApproachHeader() {
 
         </motion.div>
 
-        {/* ===================================================
-            PARAGRAPHS SECTION
-        ==================================================== */}
+    
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

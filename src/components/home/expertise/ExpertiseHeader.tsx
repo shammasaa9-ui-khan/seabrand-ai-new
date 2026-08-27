@@ -12,7 +12,7 @@ export default function ExpertiseHeader() {
         transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
         className="leading-[1.15] text-5xl md:text-6xl lg:text-6xl font-bold text-white tracking-tight max-md:tracking-wide"
       >
-        {/* 'Your' എന്ന വാക്കിന് മൊബൈലിൽ മാത്രം സ്പേസിംഗ് സാധാരണ നിലയിലാക്കുന്നു */}
+       
         <span className="tracking-tighter max-md:tracking-normal">
           Your
         </span>{" "}

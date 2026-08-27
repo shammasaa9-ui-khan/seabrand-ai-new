@@ -7,7 +7,7 @@ export default function FooterBrand() {
       {/* Logo Wrapper */}
       <Link href="/" className="inline-block w-fit">
         <Image
-          src="/images/logo-white.png"
+          src="/images/Footerlogo.png"
           alt="SeaBrand Logo"
           width={200}
           height={100}
